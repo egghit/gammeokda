@@ -5,11 +5,9 @@ const List = () => {
   return (
     <S.Container>
       <S.DiaryListHeader>
-        <div>
-          <S.ChangeMonthButton>이전 달</S.ChangeMonthButton>
-          2022년 3월
-          <S.ChangeMonthButton>다음 달</S.ChangeMonthButton>
-        </div>
+        <S.ChangeMonthButton>이전 달</S.ChangeMonthButton>
+        <S.DateText>2023년 3월</S.DateText>
+        <S.ChangeMonthButton>다음 달</S.ChangeMonthButton>
         <S.SortButton>필터링</S.SortButton>
       </S.DiaryListHeader>
       <Diary />
