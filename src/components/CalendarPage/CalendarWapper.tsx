@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Calendar from 'react-calendar';
 
 import CalendarTileContent from '@/components/CalendarPage/CalendarTileContent';
@@ -6,9 +6,15 @@ import { dateformat } from '@/utils/date';
 import 'react-calendar/dist/Calendar.css'; // css import
 
 const CalendarWapper = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
   const [value, onChange] = useState<Date>(new Date());
 
   const diaryDate = dateformat(value);
+  const time = value.getTime();
+
+  useEffect(() => {
+    setShowModal(false);
+  }, [time]);
 
   const diaryList = [
     {
@@ -18,7 +24,7 @@ const CalendarWapper = () => {
         text: '즐거웠다',
         photo:
           'https://item.kakaocdn.net/do/aebede13eed766c14f8e46d68509586c7154249a3890514a43687a85e6b6cc82',
-        emotion: '',
+        emotion: '슬픔',
       },
     },
     {
@@ -49,11 +55,18 @@ const CalendarWapper = () => {
         onChange={onChange}
         value={value}
         tileContent={({ date }) => {
-          const date2 = dateformat(date);
-          const listFinded = diaryList.find((diary) => diary.date === date2);
+          const dateFormated = dateformat(date);
+          const listFinded = diaryList.find((diary) => diary.date === dateFormated);
 
           if (listFinded) {
-            return <CalendarTileContent listFinded={listFinded} />;
+            return (
+              <CalendarTileContent
+                isModal={dateFormated === diaryDate && showModal}
+                emotion={listFinded.contents.emotion}
+                showModal={showModal}
+                setShowModal={setShowModal}
+              />
+            );
           } else {
             return <div />;
           }
