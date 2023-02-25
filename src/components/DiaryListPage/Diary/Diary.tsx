@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import * as S from './Diary.style';
 
 const Diary = () => {
-  const [itemList, setItemList] = useState([]);
+  const [itemList, setItemList] = useState<any>([]);
 
   useEffect(() => {
     setItemList([
@@ -38,14 +38,14 @@ const Diary = () => {
     <S.ItemWrapper>
       {itemList.length > 0 ? (
         <>
-          {itemList.map((i) => {
+          {itemList.map((i: any) => {
             return (
               <>
                 <div>
                   <S.ActionButton>수정</S.ActionButton>
                   <S.ActionButton>삭제</S.ActionButton>
                 </div>
-                <S.Info key={i.id}>
+                <S.Info key={i?.id}>
                   <img src="/good.png" alt="emotion" width="100px" height="100px" />
                   <S.DiaryDate>{i?.date}</S.DiaryDate>
                   <div>
