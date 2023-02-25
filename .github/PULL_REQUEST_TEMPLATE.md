@@ -20,8 +20,8 @@
 - [ ] 기능 삭제
 - [ ] 리팩토링
 - [ ] 버그 수정
-<!-- - [x] 기타: style convention lint configuration (우측에 설명기입) -->
 - [ ] 기타
+<!-- - [x] 기타: style convention lint configuration (우측에 설명기입) -->
 
 <br />
 
