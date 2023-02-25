@@ -8,6 +8,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   resolve: {
-    alias: [{ find: '@', replacement: `${resolve()}/src/components` }],
+    alias: [{ find: '@', replacement: `${resolve()}/src` }],
   },
 });
