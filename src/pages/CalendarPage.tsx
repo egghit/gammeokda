@@ -1,5 +1,11 @@
+import CalendarWapper from '@/components/CalendarPage/CalendarWapper';
+
 const CalendarPage = () => {
-  return <div>CalendarPage</div>;
+  return (
+    <div>
+      <CalendarWapper />
+    </div>
+  );
 };
 
 export default CalendarPage;
