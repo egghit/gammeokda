@@ -1,12 +1,25 @@
-import { Reset } from 'styled-reset';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
-import Routes from '@/routes';
+import CalendarPage from '@/pages/CalendarPage';
+import IndexPage from '@/pages/IndexPage';
+import GlobalStyle from '@/styles/reset';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <IndexPage />,
+  },
+  { path: 'calendar', element: <CalendarPage /> },
+]);
 
 const App = () => {
   return (
     <>
-      <Reset />
-      <Routes />
+      <GlobalStyle />
+      <RecoilRoot>
+        <RouterProvider router={router} />
+      </RecoilRoot>
     </>
   );
 };
