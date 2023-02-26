@@ -1,5 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
+import { ThemeProvider } from 'styled-components';
+
+import theme from './styles/theme';
 
 import CalendarPage from '@/pages/CalendarPage';
 import DiaryListPage from '@/pages/DiaryListPage';
@@ -21,10 +24,12 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <GlobalStyle />
-      <RecoilRoot>
-        <RouterProvider router={router} />
-      </RecoilRoot>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <RecoilRoot>
+          <RouterProvider router={router} />
+        </RecoilRoot>
+      </ThemeProvider>
     </>
   );
 };
