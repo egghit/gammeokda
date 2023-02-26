@@ -1,7 +1,7 @@
 import { collection, getDocs, doc, setDoc, Timestamp } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 
-import { Diary } from '@/@types/types';
+import { DiaryContent } from '@/@types/types';
 import Modal from '@/components/common/Modal';
 import { db } from '@/firebase';
 
@@ -22,7 +22,7 @@ const Test = () => {
     }
   };
 
-  const postDiaryTestData = async (postData: Diary) => {
+  const postDiaryTestData = async (postData: DiaryContent) => {
     try {
       //
       await setDoc(doc(db, 'diary', 'test'), postData);
@@ -32,7 +32,7 @@ const Test = () => {
     }
   };
 
-  const diaryData: Diary = {
+  const diaryData: DiaryContent = {
     date: Timestamp.fromDate(new Date('December 10, 2022')),
     emotion: '기쁨',
     photo: 'http://',
