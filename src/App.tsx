@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 
 import CalendarPage from '@/pages/CalendarPage';
-import DiaryMainPage from '@/pages/DiaryMainPage';
+import DiaryWritePage from '@/pages/DiaryWritePage';
 import IndexPage from '@/pages/IndexPage';
 import GlobalStyle from '@/styles/reset';
 
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <IndexPage />,
   },
   { path: 'calendar', element: <CalendarPage /> },
-  { path: 'diarymain', element: <DiaryMainPage /> },
+  { path: 'diarywrite', element: <DiaryWritePage /> },
 ]);
 
 const App = () => {
