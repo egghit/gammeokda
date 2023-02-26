@@ -28,6 +28,7 @@ const Damagochi = ({ name, age, isGrow, setIsGrow }: DamagochiProps) => {
   const [damagochiState, damagochiDispatch] = useReducer(damagochiReducer, damagochiInitailState);
 
   const damagochiAnimation = DamagochiAnimation[`${age}`][`${damagochiState.animation}`];
+  // const damagochiAnimation = DamagochiAnimation.egg.default;
 
   const handleTheme = () => {
     caseDispatch('click');

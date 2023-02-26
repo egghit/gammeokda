@@ -1,13 +1,13 @@
 import angryAnimation from './adult_angry.webm';
+import { ReactComponent as Adult } from './adult_default.svg';
 import delightAnimation from './adult_delight.webm';
 import happyAnimation from './adult_happy.webm';
 import sadAnimation from './adult_sad.webm';
 import strokeAnimation from './adult_stroke.webm';
-import { ReactComponent as Adult } from '../damagochi_adult.svg';
 
-const makeDamagochiAnimation = (webp: string) => {
+export const makeDamagochiAnimation = (webp: string) => {
   return (
-    <video width="150px" height="150px" autoPlay loop muted>
+    <video width="120px" height="120px" autoPlay loop muted>
       <source src={webp} type="video/webm" />
     </video>
   );
