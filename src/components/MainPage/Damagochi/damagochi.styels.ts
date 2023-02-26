@@ -26,8 +26,9 @@ export const CharName = styled.div`
 
 export const Character = styled.div`
   position: absolute;
-  background-color: black;
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
   width: 45%;
   height: 40%;
   margin: 0 auto;
@@ -35,6 +36,7 @@ export const Character = styled.div`
   right: 0;
   bottom: 0;
   top: 120px;
+  z-index: 10;
 `;
 
 const ButtonPos = styled.button`
@@ -46,12 +48,12 @@ const ButtonPos = styled.button`
 
 export const LeftButton = styled(ButtonPos)`
   left: 29%;
-  bottom: 100px;
+  bottom: 96px;
 `;
 
 export const RightButton = styled(ButtonPos)`
   right: 29%;
-  bottom: 100px;
+  bottom: 96px;
 `;
 export const CenterButton = styled(ButtonPos)`
   left: 46%;

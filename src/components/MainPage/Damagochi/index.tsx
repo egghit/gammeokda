@@ -2,6 +2,7 @@ import { useReducer } from 'react';
 
 import * as Style from './damagochi.styels';
 
+import DamagochiState from '@/assets/Damagochi';
 import DamagochiTheme, { CaseTheme } from '@/assets/DamagochiCase';
 
 type State = CaseTheme;
@@ -37,11 +38,13 @@ const Damagochi = () => {
         <Style.CharName>
           <h1>곶감이</h1>
         </Style.CharName>
-        <Style.Character>여기 다마고치</Style.Character>
+        <Style.Character>{DamagochiState.baby}</Style.Character>
         <Style.LeftButton>쓰다듬기</Style.LeftButton>
         <Style.CenterButton>감정주기</Style.CenterButton>
         <Style.RightButton onClick={handleTheme}>테마변경</Style.RightButton>
       </Style.Container>
+      {/* {DamagochiState.adult}
+       */}
     </Style.Layout>
   );
 };
