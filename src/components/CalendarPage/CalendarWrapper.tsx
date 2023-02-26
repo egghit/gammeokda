@@ -2,14 +2,14 @@ import moment from 'moment';
 import { useEffect, useState } from 'react';
 import Calendar from 'react-calendar';
 
-import * as S from './CalendarWapper.style';
+import * as S from './CalendarWrapper.style';
 
 import commonIcon from '@/assets/commonIcon';
 import CalendarTileContent from '@/components/CalendarPage/CalendarTileContent';
 import { dateformat } from '@/utils/date';
 import 'react-calendar/dist/Calendar.css'; // css import
 
-const CalendarWapper = ({ setValue, value, diaryList }: any) => {
+const CalendarWrapper = ({ setValue, value, diaryList }: any) => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const diaryDate = dateformat(value);
@@ -58,4 +58,4 @@ const CalendarWapper = ({ setValue, value, diaryList }: any) => {
   );
 };
 
-export default CalendarWapper;
+export default CalendarWrapper;

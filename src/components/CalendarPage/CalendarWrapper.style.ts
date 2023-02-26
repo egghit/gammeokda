@@ -45,6 +45,7 @@ export const CalendarContainer = styled.div`
   .react-calendar__month-view__weekdays__weekday {
     color: #6f272f;
     > abbr {
+      font-family: 'DNFBitBitTTF';
       text-decoration: none;
     }
   }

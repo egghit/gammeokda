@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import * as S from './CalendarTileContent.style.ts';
 
 import CalendarTileModal from '@/components/CalendarPage/CalendarTileModal';
-
+import { filterEmotion } from '@/utils/emotion';
 interface CalendarTileContentProps {
   emotion: any;
   showModal: any;
@@ -16,21 +16,16 @@ const CalendarTileContent = ({
   showModal,
 }: CalendarTileContentProps) => {
   return (
-    <div
-      style={{
-        position: 'relative',
-        height: 50,
-      }}
-    >
+    <S.CalendarTileContentWrapper>
       {isModal && <CalendarTileModal emotion={emotion} />}
-      <div
+      <S.Emotion
         onClick={() => {
           setShowModal(!showModal);
         }}
       >
-        {emotion}
-      </div>
-    </div>
+        {filterEmotion(emotion)}
+      </S.Emotion>
+    </S.CalendarTileContentWrapper>
   );
 };
 

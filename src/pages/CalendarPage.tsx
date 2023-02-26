@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import CalendarDiaryList from '@/components/CalendarPage/CalendarDiaryList';
 import * as S from '@/components/CalendarPage/CalendarPage.style';
-import CalendarWapper from '@/components/CalendarPage/CalendarWapper';
+import CalendarWrapper from '@/components/CalendarPage/CalendarWrapper';
 
 const CalendarPage = () => {
   const [value, setValue] = useState<Date>(new Date());
@@ -48,7 +48,7 @@ const CalendarPage = () => {
           통계
         </S.StatisticsTab>
       </S.CalendarTabList>
-      <CalendarWapper setValue={setValue} value={value} diaryList={diaryList} />
+      <CalendarWrapper setValue={setValue} value={value} diaryList={diaryList} />
       <CalendarDiaryList diaryList={diaryList} value={value} />
     </S.CalendarPageContainer>
   );
