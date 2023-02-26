@@ -19,6 +19,7 @@ const AdultAnimation = {
   happy: makeDamagochiAnimation(happyAnimation),
   stroke: makeDamagochiAnimation(strokeAnimation),
   fun: makeDamagochiAnimation(funAnimation),
+  growth: <Adult />,
   default: <Adult />,
 };
 

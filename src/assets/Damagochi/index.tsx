@@ -10,7 +10,7 @@ export const makeDamagochiAnimation = (webp: string) => {
   );
 };
 
-export const DamagochiState = {
+export const DamagochiAnimation = {
   egg: EggAnimation,
   baby: BabyAnimation,
   adult: AdultAnimation,
