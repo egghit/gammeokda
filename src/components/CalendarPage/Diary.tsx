@@ -1,6 +1,6 @@
-import 'react-calendar/dist/Calendar.css'; // css import
-import { dateformat } from '@/utils/date';
+import { Link } from 'react-router-dom';
 
+import { dateformat } from '@/utils/date';
 const Diary = ({ value, diaryList }: any) => {
   const diaryDate = dateformat(value);
   const diaryListFiltered = diaryList.filter((diary: any) => diary.date === diaryDate);
@@ -21,17 +21,19 @@ const Diary = ({ value, diaryList }: any) => {
         <span style={{ fontSize: 32, color: '#6F272F', margin: '12px 0' }}>
           작성된 일기가 없어요...
         </span>
-        <button
-          style={{
-            fontSize: 24,
-            backgroundColor: '#6F272F',
-            color: 'white',
-            padding: '10px 20px',
-            borderRadius: 14,
-          }}
-        >
-          작성하러 가기
-        </button>
+        <Link to="/diaries">
+          <button
+            style={{
+              fontSize: 24,
+              backgroundColor: '#6F272F',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: 14,
+            }}
+          >
+            작성하러 가기
+          </button>
+        </Link>
       </div>
     );
   }

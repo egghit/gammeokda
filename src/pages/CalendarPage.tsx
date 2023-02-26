@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 import CalendarWapper from '@/components/CalendarPage/CalendarWapper';
 import Diary from '@/components/CalendarPage/Diary';
-
 const CalendarPage = () => {
   const [value, setValue] = useState<Date>(new Date());
 
