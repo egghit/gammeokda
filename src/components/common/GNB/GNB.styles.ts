@@ -9,7 +9,7 @@ export const GNBContainer = styled.div`
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: -55px;
+  bottom: -75px;
 `;
 
 export const NavIcons = styled.div`

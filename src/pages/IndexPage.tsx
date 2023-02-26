@@ -4,6 +4,7 @@ import ProgressBar from '@/components/MainPage/ProgressBar';
 const IndexPage = () => {
   return (
     <>
+      <ProgressBar />
       <Damagochi />
       <GNB />
     </>
