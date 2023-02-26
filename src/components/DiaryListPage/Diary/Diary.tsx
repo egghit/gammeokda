@@ -5,7 +5,7 @@ import * as S from './Diary.style';
 import { Diary } from '@/@types/types';
 
 const DiaryComponent = () => {
-  const [itemList, setItemList] = useState<Diary>([]);
+  const [itemList, setItemList] = useState<Diary[]>([]);
   useEffect(() => {
     setItemList([
       {
