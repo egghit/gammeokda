@@ -2,8 +2,8 @@ import * as S from './Modal.style';
 
 interface Props {
   setModalOpen: (isOpen: boolean) => void;
-  text: string;
-  imagePath: string;
+  text?: string;
+  imagePath?: string;
   buttonText?: string;
   handleButtonEvent?: () => void;
 }
