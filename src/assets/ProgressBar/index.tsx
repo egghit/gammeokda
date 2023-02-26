@@ -11,19 +11,27 @@ import { ReactComponent as Bar_80 } from './progressBar_80.svg';
 import { ReactComponent as Bar_90 } from './progressBar_90.svg';
 import { ReactComponent as Container } from './progressContainer.svg';
 
+type ProgressBarType = {
+  [key: number]: JSX.Element;
+};
+const bar: ProgressBarType = {
+  0: <Bar_0 />,
+  10: <Bar_10 />,
+  20: <Bar_20 />,
+  30: <Bar_30 />,
+  40: <Bar_40 />,
+  50: <Bar_50 />,
+  60: <Bar_60 />,
+  70: <Bar_70 />,
+  80: <Bar_80 />,
+  90: <Bar_90 />,
+  100: <Bar_100 />,
+};
+const container = <Container />;
+
 const Progress = {
-  bar_0: <Bar_0 />,
-  bar_10: <Bar_10 />,
-  bar_20: <Bar_20 />,
-  bar_30: <Bar_30 />,
-  bar_40: <Bar_40 />,
-  bar_50: <Bar_50 />,
-  bar_60: <Bar_60 />,
-  bar_70: <Bar_70 />,
-  bar_80: <Bar_80 />,
-  bar_90: <Bar_90 />,
-  bar_100: <Bar_100 />,
-  container: <Container />,
+  bar,
+  container,
 };
 
 export default Progress;
