@@ -1,9 +1,9 @@
-import angryAnimation from './Adult_Angry.webm';
-import funAnimation from './Adult_Fun.webm';
-import happyAnimation from './Adult_Happy.webm';
-import sadAnimation from './Adult_Sad.webm';
-import strokeAnimation from './Adult_Stroke.webm';
-import { ReactComponent as Adult } from '../Damagochi_adult.svg';
+import angryAnimation from './adult_angry.webm';
+import funAnimation from './adult_fun.webm';
+import happyAnimation from './adult_happy.webm';
+import sadAnimation from './adult_sad.webm';
+import strokeAnimation from './adult_stroke.webm';
+import { ReactComponent as Adult } from '../damagochi_adult.svg';
 
 const makeDamagochiAnimation = (webp: string) => {
   return (

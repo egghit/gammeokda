@@ -1,6 +1,6 @@
-import AdultAnimation from './DamagochiAdult';
-import BabyAnimation from './DamagochiBaby';
-import EggAnimation from './DamagochiEgg';
+import AdultAnimation from './damagochiAdult';
+import BabyAnimation from './damagochiBaby';
+import EggAnimation from './damagochiEgg';
 
 export const makeDamagochiAnimation = (webp: string) => {
   return (

@@ -1,10 +1,10 @@
-import angryAnimation from './Baby_Angry.webm';
-import funAnimation from './Baby_Fun.webm';
-import growthAnimation from './Baby_Growth.webm';
-import happyAnimation from './Baby_Happy.webm';
-import sadAnimation from './Baby_Sad.webm';
-import strokeAnimation from './Baby_Stroke.webm';
-import { ReactComponent as Baby } from '../Damagochi_baby.svg';
+import angryAnimation from './baby_angry.webm';
+import funAnimation from './baby_fun.webm';
+import growthAnimation from './baby_growth.webm';
+import happyAnimation from './baby_happy.webm';
+import sadAnimation from './baby_sad.webm';
+import strokeAnimation from './baby_stroke.webm';
+import { ReactComponent as Baby } from '../damagochi_baby.svg';
 
 const makeDamagochiAnimation = (webp: string) => {
   return (

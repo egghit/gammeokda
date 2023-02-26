@@ -1,10 +1,10 @@
-import angryAnimation from './Egg_Angry.webm';
-import funAnimation from './Egg_Fun.webm';
-import growthAnimation from './Egg_Growth.webm';
-import happyAnimation from './Egg_Happy.webm';
-import sadAnimation from './Egg_Sad.webm';
-import strokeAnimation from './Egg_Stroke.webm';
-import { ReactComponent as Egg } from '../Damagochi_egg.svg';
+import angryAnimation from './egg_angry.webm';
+import funAnimation from './egg_fun.webm';
+import growthAnimation from './egg_growth.webm';
+import happyAnimation from './egg_happy.webm';
+import sadAnimation from './egg_sad.webm';
+import strokeAnimation from './egg_stroke.webm';
+import { ReactComponent as Egg } from '../damagochi_egg.svg';
 
 const makeDamagochiAnimation = (webp: string) => {
   return (

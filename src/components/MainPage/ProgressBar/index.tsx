@@ -2,7 +2,7 @@ import React from 'react';
 
 import * as Style from './progressBar.styles';
 
-import Progress from '@/assets/ProgressBar';
+import Progress from '@/assets/progressBar';
 const user = {
   growing: 3,
 };

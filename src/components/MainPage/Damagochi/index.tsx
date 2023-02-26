@@ -2,8 +2,8 @@ import { useReducer } from 'react';
 
 import * as Style from './damagochi.styels';
 
-import { DamagochiState } from '@/assets/Damagochi';
-import DamagochiTheme, { CaseTheme } from '@/assets/DamagochiCase';
+import { DamagochiState } from '@/assets/damagochi';
+import DamagochiTheme, { CaseTheme } from '@/assets/damagochiCase';
 
 type State = CaseTheme;
 type Action = 'click';
