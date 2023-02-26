@@ -7,6 +7,13 @@ export const CalendarContainer = styled.div`
     border: none;
   }
 
+  .react-calendar__tile {
+    :hover {
+      background-color: transparent;
+    }
+    height: 70px;
+  }
+
   .react-calendar__navigation {
     width: 240px;
     margin: 0 auto;
@@ -25,6 +32,16 @@ export const CalendarContainer = styled.div`
     background-color: transparent;
     :hover {
       background-color: transparent;
+    }
+  }
+
+  .react-calendar__tile {
+    > abbr {
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
     }
   }
 
