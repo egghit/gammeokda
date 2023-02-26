@@ -1,4 +1,6 @@
-const color = {
+import { DefaultTheme } from 'styled-components';
+
+const colors = {
   white: '#FFFDFB',
   black: '#222222',
   primaryLighter: '#F6BCC2',
@@ -10,8 +12,10 @@ const color = {
   secondaryDark: '#6D3435',
 };
 
-const theme = {
-  color,
+export type ColorsType = typeof colors;
+
+const theme: DefaultTheme = {
+  colors,
 };
 
 export default theme;
