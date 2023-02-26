@@ -84,8 +84,8 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
   }
 
-  body {
-    font-family: 'DNFBitBitTTF', sans-serif;
+  * {
+    font-family: 'DNFBitBitTTF';
   }
 `;
 
