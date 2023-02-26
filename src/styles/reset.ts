@@ -76,6 +76,17 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     cursor: pointer;
   }
+
+  @font-face {
+    font-family: 'DNFBitBitTTF';
+    src: url('/fonts/DNFBitBitTTF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'DNFBitBitTTF', sans-serif;
+  }
 `;
 
 export default GlobalStyles;
