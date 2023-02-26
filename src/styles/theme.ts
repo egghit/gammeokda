@@ -1,3 +1,5 @@
+import { DefaultTheme } from 'styled-components';
+
 const color = {
   white: '#FFFDFB',
   black: '#222222',
@@ -11,7 +13,9 @@ const color = {
   titlePink: '#D99191',
 };
 
-const theme = {
+export type ColorType = typeof color;
+
+const theme: DefaultTheme = {
   color,
 };
 
