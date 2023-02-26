@@ -21,7 +21,7 @@ export const CalendarContainer = styled.div`
 
   .react-calendar__navigation__label {
     width: 200px;
-    color: #6f272f;
+    color: ${({ theme }) => theme.color.primaryDark};
   }
 
   .react-calendar__month-view__weekdays {
@@ -50,7 +50,7 @@ export const CalendarContainer = styled.div`
 
     > abbr {
       color: white !important;
-      background-color: #6f272f;
+      background-color: ${({ theme }) => theme.color.primaryDark};
       border-radius: 50%;
       display: inline-flex;
       justify-content: center;
@@ -60,7 +60,7 @@ export const CalendarContainer = styled.div`
     }
   }
   .react-calendar__month-view__weekdays__weekday {
-    color: #6f272f;
+    color: ${({ theme }) => theme.color.primaryDark};
     > abbr {
       font-family: 'DNFBitBitTTF';
       text-decoration: none;
@@ -69,7 +69,7 @@ export const CalendarContainer = styled.div`
 
   .react-calendar__month-view__days__day {
     > abbr {
-      color: #6f272f;
+      color: ${({ theme }) => theme.color.primaryDark};
     }
   }
   .react-calendar__month-view__days__day--weekend {

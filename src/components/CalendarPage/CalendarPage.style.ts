@@ -13,15 +13,15 @@ export const CalendarTabList = styled.div`
 `;
 
 export const CalendarTab = styled.div`
-  color: #6f272f;
+  color: ${({ theme }) => theme.color.primaryDark};
   padding: 5px 20px;
-  border-bottom: 4px solid #6f272f;
+  border-bottom: 4px solid ${({ theme }) => theme.color.primaryDark};
   cursor: pointer;
 `;
 
 export const StatisticsTab = styled.div`
-  color: #d4a6ab;
+  color: ${({ theme }) => theme.color.primaryDark};
   padding: 5px 20px;
-  border-bottom: 4px solid #d4a6ab;
+  border-bottom: 4px solid ${({ theme }) => theme.color.primaryDark};
   cursor: pointer;
 `;

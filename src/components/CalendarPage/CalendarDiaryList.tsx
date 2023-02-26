@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 
+import * as S from './CalendarDiaryList.style';
+
+import emotion from '@/assets/emotionIcon';
 import Diary from '@/components/DiaryListPage/Diary';
 import { dateformat } from '@/utils/date';
 
@@ -9,34 +12,13 @@ const CalendarDiaryList = ({ diaryList, value }: any) => {
 
   if (diaryListFiltered.length === 0) {
     return (
-      <div
-        style={{
-          border: '4px solid #6F272F',
-          borderRadius: 15,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '38px 0',
-        }}
-      >
-        <img src="/sad.svg" width={200} height={145} />
-        <span style={{ fontSize: 32, color: '#6F272F', margin: '12px 0' }}>
-          작성된 일기가 없어요...
-        </span>
+      <S.CalendarDiaryListEmpty>
+        <S.EmptyImageWrapper>{emotion.sadActive}</S.EmptyImageWrapper>
+        <S.EmptyText>작성된 일기가 없어요...</S.EmptyText>
         <Link to="/diaries">
-          <button
-            style={{
-              fontSize: 24,
-              backgroundColor: '#6F272F',
-              color: 'white',
-              padding: '10px 20px',
-              borderRadius: 14,
-            }}
-          >
-            작성하러 가기
-          </button>
+          <S.WritePageButton>작성하러 가기</S.WritePageButton>
         </Link>
-      </div>
+      </S.CalendarDiaryListEmpty>
     );
   }
 
