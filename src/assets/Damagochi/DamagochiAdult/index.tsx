@@ -1,5 +1,5 @@
 import angryAnimation from './adult_angry.webm';
-import funAnimation from './adult_fun.webm';
+import delightAnimation from './adult_delight.webm';
 import happyAnimation from './adult_happy.webm';
 import sadAnimation from './adult_sad.webm';
 import strokeAnimation from './adult_stroke.webm';
@@ -18,7 +18,7 @@ const AdultAnimation = {
   sad: makeDamagochiAnimation(sadAnimation),
   happy: makeDamagochiAnimation(happyAnimation),
   stroke: makeDamagochiAnimation(strokeAnimation),
-  fun: makeDamagochiAnimation(funAnimation),
+  delight: makeDamagochiAnimation(delightAnimation),
   growth: <Adult />,
   default: <Adult />,
 };

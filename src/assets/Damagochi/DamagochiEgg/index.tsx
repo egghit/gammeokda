@@ -1,5 +1,5 @@
 import angryAnimation from './egg_angry.webm';
-import funAnimation from './egg_fun.webm';
+import delightAnimation from './egg_delight.webm';
 import growthAnimation from './egg_growth.webm';
 import happyAnimation from './egg_happy.webm';
 import sadAnimation from './egg_sad.webm';
@@ -20,7 +20,7 @@ const EggAnimation = {
   growth: makeDamagochiAnimation(growthAnimation),
   happy: makeDamagochiAnimation(happyAnimation),
   stroke: makeDamagochiAnimation(strokeAnimation),
-  fun: makeDamagochiAnimation(funAnimation),
+  delight: makeDamagochiAnimation(delightAnimation),
   default: <Egg />,
 };
 
