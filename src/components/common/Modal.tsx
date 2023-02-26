@@ -11,7 +11,7 @@ interface Props {
 const Modal = ({
   setModalOpen,
   text = '아직 준비중입니다....',
-  imagePath = '/우는얼굴.png',
+  imagePath = '/우는얼굴.svg',
   buttonText,
   handleButtonEvent,
 }: Props) => {
@@ -20,9 +20,9 @@ const Modal = ({
   };
   return (
     <S.ModalContainer>
-      <img src={imagePath} width="399px" height="289px" />
+      <img src={imagePath} width="200px" height="194px" alt="sad" />
       <S.ModalCloseButton onClick={closeModal}>
-        <img src="/close_icon.svg" />
+        <img src="/close_icon.svg" alt="close_button" />
       </S.ModalCloseButton>
       <S.ModalText>{text}</S.ModalText>
       {buttonText && <S.ModalButton onClick={handleButtonEvent}>{buttonText}</S.ModalButton>}
