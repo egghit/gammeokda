@@ -19,6 +19,7 @@ const CalendarTileContent = ({
     <div
       style={{
         position: 'relative',
+        height: 50,
       }}
     >
       {isModal && <CalendarTileModal emotion={emotion} />}

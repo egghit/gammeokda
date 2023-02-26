@@ -42,7 +42,13 @@ const CalendarWapper = ({ setValue, value, diaryList }: any) => {
               />
             );
           } else {
-            return <div />;
+            return (
+              <div
+                style={{
+                  height: 50,
+                }}
+              />
+            );
           }
         }}
       />
@@ -57,7 +63,7 @@ const CalendarContainer = styled.div`
   }
 
   .react-calendar__navigation {
-    width: 300px;
+    width: 240px;
     margin: 0 auto;
   }
 
@@ -70,7 +76,27 @@ const CalendarContainer = styled.div`
     text-align: center;
     font-size: 24px;
   }
+  .react-calendar__tile--now {
+    background-color: transparent;
+    :hover {
+      background-color: transparent;
+    }
+  }
 
+  .react-calendar__tile--active {
+    background-color: transparent !important;
+
+    > abbr {
+      color: white !important;
+      background-color: #6f272f;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+    }
+  }
   .react-calendar__month-view__weekdays__weekday {
     color: #6f272f;
     > abbr {
@@ -78,6 +104,16 @@ const CalendarContainer = styled.div`
     }
   }
 
+  .react-calendar__month-view__days__day {
+    > abbr {
+      color: #6f272f;
+    }
+  }
+  .react-calendar__month-view__days__day--weekend {
+    > abbr {
+      color: #d10000;
+    }
+  }
   .react-calendar__navigation__label__labelText {
     font-size: 32px;
   }

@@ -67,7 +67,7 @@ const CalendarPage = () => {
           style={{
             color: '#6F272F',
             padding: '5px 20px',
-            borderBottom: '2px solid #6F272F',
+            borderBottom: '4px solid #6F272F',
           }}
         >
           달력
@@ -76,7 +76,7 @@ const CalendarPage = () => {
           style={{
             color: '#D4A6AB',
             padding: '5px 20px',
-            borderBottom: '2px solid #D4A6AB',
+            borderBottom: '4px solid #D4A6AB',
             cursor: 'pointer',
           }}
           onClick={() => {
