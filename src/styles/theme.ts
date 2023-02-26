@@ -1,12 +1,13 @@
 const color = {
-  white: '#F5F4F2',
-  beige: '#FFE5B8',
-  pink1: '#F6BCC2',
-  pink2: '#FF7880',
-  burgundy1: '#6D3435',
-  burgundy2: '#813E3F',
-  burgundy3: '#6F272F',
-  burgundy4: '#8A363E',
+  white: '#FFFDFB',
+  black: '#222222',
+  primaryLighter: '#F6BCC2',
+  primaryLight: '#FFA6AB',
+  primary: '#FF7880',
+  primaryDimmed: '#D4A6AB',
+  primaryDark: '#6F272F',
+  secondary: '#813E3F',
+  secondaryDark: '#6D3435',
 };
 
 const theme = {
