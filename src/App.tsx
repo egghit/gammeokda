@@ -11,6 +11,7 @@ import IndexPage from '@/pages/IndexPage';
 import SettingPage from '@/pages/SettingPage';
 import Test from '@/pages/Test';
 import GlobalStyle from '@/styles/reset';
+import '@/styles/override.css';
 
 const router = createBrowserRouter([
   {

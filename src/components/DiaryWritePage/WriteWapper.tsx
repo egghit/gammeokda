@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Emotion } from '@/@types/types';
 
-const WriteWapper = () => {
+const WriteWrapper = () => {
   const emotions: Emotion[] = ['기쁨', '슬픔', '행복', '쏘쏘', '화남'];
   const [selectedEmotion, setSelectedEmotion] = useState<Emotion>('슬픔');
 
@@ -23,4 +23,4 @@ const WriteWapper = () => {
   );
 };
 
-export default WriteWapper;
+export default WriteWrapper;
