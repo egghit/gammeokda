@@ -17,9 +17,11 @@
     ]
   },
   "dependencies": {
+    "@types/moment": "^2.13.0",
     "@types/react-calendar": "^3.9.0",
     "@types/styled-components": "^5.1.26",
     "firebase": "^9.17.1",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-calendar": "^4.0.0",
     "react-dom": "^18.2.0",
