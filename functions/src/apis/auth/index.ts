@@ -1,3 +1,4 @@
+/*
 import { Router, Request, Response } from 'express';
 
 import { login } from './service';
@@ -39,3 +40,4 @@ interface CookieOptions {
 }
 
 export default router;
+*/
