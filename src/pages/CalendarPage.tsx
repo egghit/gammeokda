@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
+import * as S from '@/components/CalendarPage/CalendarPage.style';
 import CalendarWapper from '@/components/CalendarPage/CalendarWapper';
 import Diary from '@/components/CalendarPage/Diary';
+
 const CalendarPage = () => {
   const [value, setValue] = useState<Date>(new Date());
 
@@ -49,46 +51,20 @@ const CalendarPage = () => {
   ];
 
   return (
-    <div
-      style={{
-        maxWidth: 350,
-        margin: '0 auto',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          marginBottom: 50,
-          marginTop: 50,
-          justifyContent: 'center',
-        }}
-      >
-        <div
-          style={{
-            color: '#6F272F',
-            padding: '5px 20px',
-            borderBottom: '4px solid #6F272F',
-          }}
-        >
-          달력
-        </div>
-        <div
-          style={{
-            color: '#D4A6AB',
-            padding: '5px 20px',
-            borderBottom: '4px solid #D4A6AB',
-            cursor: 'pointer',
-          }}
+    <S.CalendarPageContainer>
+      <S.CalendarTabList>
+        <S.CalendarTab>달력</S.CalendarTab>
+        <S.StatisticsTab
           onClick={() => {
             alert('준비중입니다.');
           }}
         >
           통계
-        </div>
-      </div>
+        </S.StatisticsTab>
+      </S.CalendarTabList>
       <CalendarWapper setValue={setValue} value={value} diaryList={diaryList} />
       <Diary value={value} diaryList={diaryList} />
-    </div>
+    </S.CalendarPageContainer>
   );
 };
 
