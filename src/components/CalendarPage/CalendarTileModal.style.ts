@@ -12,10 +12,8 @@ export const CalendarTileModalContainer = styled.div`
   padding: 12px 12.8px;
 
   ::after {
+    border: 10px solid transparent;
     border-top: 10px solid #484848;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 0px solid transparent;
     content: '';
     position: absolute;
     top: 40px;
