@@ -1,27 +1,22 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import { atom, useRecoilState } from 'recoil';
 
+import { DiaryContent } from '@/@types/types';
 import commonIcon from '@/assets/commonIcon';
 import Modal from '@/components/common/Modal';
 import Diary from '@/components/DiaryListPage/Diary';
 import * as S from '@/components/DiaryListPage/DiaryListPage.style';
 import { db } from '@/firebase';
-import { useModal } from '@/hooks/useModal';
 
-const itemListState = atom({
-  key: 'itemListState',
-  default: [],
-});
 const List = () => {
-  const [itemList, setItemList] = useRecoilState<any>(itemListState);
-  const [itemModalOpen, setItemModalOpen, toggleModal] = useModal();
+  const [itemList, setItemList] = useState<DiaryContent[]>([]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const getDiaryListData: () => Promise<void> = async () => {
     try {
       const query = await getDocs(collection(db, 'diary'));
-      const data = [];
-      query.forEach((document) => {
+      const data: Array<DiaryContent> = [];
+      query.forEach((document: any) => {
         return data.push(document.data());
       });
       setItemList(data);
@@ -42,22 +37,26 @@ const List = () => {
     });
   };
 
+  const showModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <S.Container>
-      {itemModalOpen && <Modal setModalOpen={setItemModalOpen} />}
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
       <S.DiaryListHeader>
         <S.MonthWrapper>
-          <button onClick={toggleModal}>{commonIcon.arrowLeft}</button>
+          <button onClick={showModal}>{commonIcon.arrowLeft}</button>
           <S.DateText>
             {new Intl.DateTimeFormat('ko', {
               year: 'numeric',
               month: 'long',
             }).format(new Date())}
           </S.DateText>
-          <button onClick={toggleModal}>{commonIcon.arrowRight}</button>
+          <button onClick={showModal}>{commonIcon.arrowRight}</button>
         </S.MonthWrapper>
         <S.SortButtonWrapper>
-          <button onClick={toggleModal}>{commonIcon.arrowSort}</button>
+          <button onClick={showModal}>{commonIcon.arrowSort}</button>
         </S.SortButtonWrapper>
       </S.DiaryListHeader>
       <>

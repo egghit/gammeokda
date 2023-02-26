@@ -1,15 +1,10 @@
 import { collection, getDocs, doc, setDoc, Timestamp } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { DiaryContent } from '@/@types/types';
-import Modal from '@/components/common/Modal';
 import { db } from '@/firebase';
-import { useModal } from '@/hooks/useModal';
 
 const Test = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [itemModalOpen, setItemModalOpen, toggleModal] = useModal();
-
   const getDiaryTestData: () => Promise<void> = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, 'diary'));
@@ -48,9 +43,7 @@ const Test = () => {
 
   return (
     <div>
-      {itemModalOpen && <Modal setModalOpen={setItemModalOpen} />}
       <button onClick={() => postDiaryTestData(diaryData)}>버튼</button>
-      <button onClick={toggleModal}>모달 열기</button>
     </div>
   );
 };

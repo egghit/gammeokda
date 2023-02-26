@@ -6,7 +6,6 @@ import { DiaryContent } from '@/@types/types';
 import commonIcon from '@/assets/commonIcon';
 import emotionIcon from '@/assets/emotionIcon';
 import Modal from '@/components/common/Modal';
-import { useModal } from '@/hooks/useModal';
 
 interface Props {
   contents: DiaryContent;
@@ -16,14 +15,18 @@ const Diary = (props: Props) => {
   const { id, date, photo, text } = props.contents;
 
   const [hasMoreContents, setHasMoreContents] = useState<boolean>(false);
-  const [itemModalOpen, setItemModalOpen, toggleModal] = useModal();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const showModal = () => {
+    setModalOpen(true);
+  };
 
   return (
     <S.ItemWrapper>
-      {itemModalOpen && <Modal setModalOpen={setItemModalOpen} />}
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
       <S.EditButtonWrapper>
-        <S.ActionButton onClick={toggleModal}>{commonIcon.editPencil}</S.ActionButton>
-        <S.ActionButton onClick={toggleModal}>{commonIcon.deleteTrash}</S.ActionButton>
+        <S.ActionButton onClick={showModal}>{commonIcon.editPencil}</S.ActionButton>
+        <S.ActionButton onClick={showModal}>{commonIcon.deleteTrash}</S.ActionButton>
       </S.EditButtonWrapper>
       <S.DiaryContentWarpper>
         <S.Info key={id}>
