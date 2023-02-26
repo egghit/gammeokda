@@ -26,11 +26,12 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <ThemeProvider theme={theme} />
-      <GlobalStyle />
-      <RecoilRoot>
-        <RouterProvider router={router} />
-      </RecoilRoot>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <RecoilRoot>
+          <RouterProvider router={router} />
+        </RecoilRoot>
+      </ThemeProvider>
     </>
   );
 };
