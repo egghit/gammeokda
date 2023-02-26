@@ -1,5 +1,5 @@
-import Container from './prgoress_container.svg';
-import Bar from './progressBar.svg';
+import { ReactComponent as Container } from './PrgoressContainer.svg';
+import { ReactComponent as Bar } from './ProgressBar.svg';
 
 const Progress = {
   container: <Container />,

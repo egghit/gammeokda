@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     line-height: 1;
     position: relative;
-    max-width: 34.5rem;
+    max-width: 400px;
     margin: 0 auto;
     min-height: 100vh;
     padding: 0;

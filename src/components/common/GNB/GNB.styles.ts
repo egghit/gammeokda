@@ -9,7 +9,7 @@ export const GNBContainer = styled.div`
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: 0px;
+  bottom: -55px;
 `;
 
 export const NavIcons = styled.div`
@@ -18,6 +18,7 @@ export const NavIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 100px;
 `;
 
 export const SideIcons = styled.div`
@@ -29,12 +30,13 @@ export const SideIcons = styled.div`
   button {
     width: 100%;
     font-size: 24px;
-    /* color: ${(props) => props.theme.colors.white}; */
+    color: ${(props) => props.theme.colors.white};
   }
 `;
 
 export const HomeButton = styled.div`
   position: absolute;
-  left: 40.5%;
-  top: -105px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: -50px;
 `;

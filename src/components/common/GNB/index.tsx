@@ -5,11 +5,11 @@ import * as Style from './GNB.styles';
 
 import GNB_SVG from '@/assets/GNB';
 // 달력 , 추억, 공유, 설정
-const LeftLinks = [
+const LEFT_LINKS = [
   { title: '달력', link: '/calendar' },
   { title: '추억', link: '/diaries' },
 ];
-const RightLinks = [
+const RIGHT_LINKS = [
   { title: '공유', link: '/' },
   { title: '설정', link: '/' },
 ];
@@ -21,7 +21,7 @@ const GNB = () => {
       {GNB_SVG.container}
       <Style.NavIcons>
         <Style.SideIcons>
-          {LeftLinks.map((link) => (
+          {LEFT_LINKS.map((link) => (
             <button key={link.title} onClick={() => navigate(link.link)}>
               {link.title}
             </button>
@@ -29,7 +29,7 @@ const GNB = () => {
         </Style.SideIcons>
         <Style.HomeButton>{GNB_SVG.homeButton}</Style.HomeButton>
         <Style.SideIcons>
-          {RightLinks.map((link) => (
+          {RIGHT_LINKS.map((link) => (
             <button key={link.title} onClick={() => navigate(link.link)}>
               {link.title}
             </button>
