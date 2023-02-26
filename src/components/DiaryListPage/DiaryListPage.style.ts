@@ -17,7 +17,6 @@ export const Container = styled.section`
 export const DateText = styled.h2`
   margin: 0 1rem;
   font-size: 1.5rem;
-  font-family: 'DNFBitBitTTF';
   color: ${({ theme }) => theme.color.primaryDark};
 `;
 

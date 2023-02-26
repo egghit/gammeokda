@@ -47,13 +47,12 @@ export const Info = styled.div`
   align-items: start;
 `;
 
-export const ContentWrapper = styled.div<{ isMoreContents: boolean }>`
+export const ContentWrapper = styled.div<{ hasMoreContents: boolean }>`
   display: -webkit-box;
   flex: 7;
   color: ${({ theme }) => theme.color.primaryDark};
-  -webkit-line-clamp: ${(props) => (props.isMoreContents ? 5 : '')};
+  -webkit-line-clamp: ${(props) => (props.hasMoreContents ? 5 : '')};
   -webkit-box-orient: vertical;
-  font-family: 'DNFBitBitTTF';
   line-height: 1.312;
   overflow: hidden;
 

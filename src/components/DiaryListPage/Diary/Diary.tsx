@@ -13,7 +13,7 @@ interface Props {
 const Diary = (props: Props) => {
   const { id, date, photo, text } = props.contents;
 
-  const [isMoreContents, setIsMoreContents] = useState<boolean>(false);
+  const [hasMoreContents, setHasMoreContents] = useState<boolean>(false);
 
   return (
     <S.ItemWrapper>
@@ -27,13 +27,13 @@ const Diary = (props: Props) => {
             {emotionIcon.delightActive}
             <S.DiaryDate>2일 금</S.DiaryDate>
           </S.DateWrapper>
-          <S.ContentWrapper isMoreContents={!isMoreContents}>
+          <S.ContentWrapper hasMoreContents={!hasMoreContents}>
             {text || '작성된 글이 없습니다.'}
             {photo && <img src={photo} alt="photo" />}
           </S.ContentWrapper>
         </S.Info>
-        <S.ScrollButton onClick={() => setIsMoreContents(!isMoreContents)}>
-          {isMoreContents ? commonIcon.arrowUp : commonIcon.arrowDown}
+        <S.ScrollButton onClick={() => setHasMoreContents(!hasMoreContents)}>
+          {hasMoreContents ? commonIcon.arrowUp : commonIcon.arrowDown}
         </S.ScrollButton>
       </S.DiaryContentWarpper>
     </S.ItemWrapper>
