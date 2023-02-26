@@ -9,16 +9,18 @@ export const MenuWrapper = styled.section`
 export const SettingTitle = styled.h2`
   color: ${(props) => props.theme.color.black};
   margin-bottom: 5px;
+  font-size: 1.5rem;
 `;
 
 export const SettingMenuLink = styled.a`
   color: ${(props) => props.theme.color.titlePink};
   display: block;
-  text-align: center;
+  font-size: 1.25rem;
 `;
 
 export const SettingMenuButton = styled.button`
   color: ${(props) => props.theme.color.titlePink};
+  font-size: 1.25rem;
 `;
 
 export const MenuItemWrapper = styled.div`
