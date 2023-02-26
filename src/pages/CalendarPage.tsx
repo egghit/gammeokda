@@ -36,7 +36,6 @@ const CalendarPage = () => {
     getDiaryTestData();
   }, []);
 
-  console.log(diaryList);
   return (
     <S.CalendarPageContainer>
       {modalOpen && <Modal setModalOpen={setModalOpen} />}
