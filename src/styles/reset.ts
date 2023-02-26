@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import background from '@/assets/background.png';
+
 const GlobalStyles = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -86,6 +88,14 @@ const GlobalStyles = createGlobalStyle`
 
   body, * {
     font-family: 'DNFBitBitTTF';
+  }
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    background-image: url(${background});
+    background-size: 100% 100%;
   }
 `;
 
