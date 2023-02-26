@@ -10,7 +10,6 @@ import DiaryWritePage from '@/pages/DiaryWritePage';
 import IndexPage from '@/pages/IndexPage';
 import Test from '@/pages/Test';
 import GlobalStyle from '@/styles/reset';
-import 'react-tooltip/dist/react-tooltip.css';
 import '@/styles/override.css';
 
 const router = createBrowserRouter([
