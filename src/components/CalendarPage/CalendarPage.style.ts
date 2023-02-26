@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CalendarPageContainer = styled.div`
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 auto;
 `;
 
