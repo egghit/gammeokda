@@ -20,8 +20,8 @@ export const CalendarTab = styled.div`
 `;
 
 export const StatisticsTab = styled.div`
-  color: ${({ theme }) => theme.color.primaryDark};
+  color: ${({ theme }) => theme.color.primaryDimmed};
   padding: 5px 20px;
-  border-bottom: 4px solid ${({ theme }) => theme.color.primaryDark};
+  border-bottom: 4px solid ${({ theme }) => theme.color.primaryDimmed};
   cursor: pointer;
 `;
