@@ -19,14 +19,16 @@ const Modal = ({
     setModalOpen(false);
   };
   return (
-    <S.ModalContainer>
-      <img src={imagePath} width="200px" height="194px" alt="sad" />
-      <S.ModalCloseButton onClick={closeModal}>
-        <img src="/close_icon.svg" alt="close_button" />
-      </S.ModalCloseButton>
-      <S.ModalText>{text}</S.ModalText>
-      {buttonText && <S.ModalButton onClick={handleButtonEvent}>{buttonText}</S.ModalButton>}
-    </S.ModalContainer>
+    <S.Dimmer>
+      <S.ModalContainer>
+        <img src={imagePath} width="200px" height="194px" alt="sad" />
+        <S.ModalCloseButton onClick={closeModal}>
+          <img src="/close_icon.svg" alt="close_button" />
+        </S.ModalCloseButton>
+        <S.ModalText>{text}</S.ModalText>
+        {buttonText && <S.ModalButton onClick={handleButtonEvent}>{buttonText}</S.ModalButton>}
+      </S.ModalContainer>
+    </S.Dimmer>
   );
 };
 
