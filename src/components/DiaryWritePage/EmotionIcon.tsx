@@ -1,14 +1,6 @@
 import { Emotion } from '@/@types/types';
-import { ReactComponent as AngryFace } from '@/assets/AngryFace.svg';
-import { ReactComponent as DisabledAngryFace } from '@/assets/AngryFace_disabled.svg';
-import { ReactComponent as DelightfulFace } from '@/assets/DelightfulFace.svg';
-import { ReactComponent as DisabledDelightfulFace } from '@/assets/DelightfulFace_disabled.svg';
-import { ReactComponent as HappyFace } from '@/assets/HappyFace.svg';
-import { ReactComponent as DisabledHappyFace } from '@/assets/HappyFace_disabled.svg';
-import { ReactComponent as SadFace } from '@/assets/SadFace.svg';
-import { ReactComponent as DisabledSadFace } from '@/assets/SadFace_disabled.svg';
-import { ReactComponent as SosoFace } from '@/assets/SosoFace.svg';
-import { ReactComponent as DisabledSosoFace } from '@/assets/SosoFace_disabled.svg';
+import emotionIcon from '@/assets/emotionIcon';
+
 
 interface EmotionIconProps {
   category: Emotion;
@@ -18,15 +10,15 @@ interface EmotionIconProps {
 const EmotionIcon = ({ category, selected }: EmotionIconProps) => {
   switch (category) {
     case '행복':
-      return selected ? <SadFace /> : <DisabledHappyFace />;
+      return selected ? emotionIcon.happyActive : emotionIcon.happyDisabled;
     case '기쁨':
-      return selected ? <DelightfulFace /> : <DisabledDelightfulFace />;
+      return selected ? emotionIcon.delightActive : emotionIcon.delightDisabled;
     case '슬픔':
-      return selected ? <SadFace /> : <DisabledSadFace />;
+      return selected ? emotionIcon.sadActive : emotionIcon.sadDisabled;
     case '화남':
-      return selected ? <AngryFace /> : <DisabledAngryFace />;
+      return selected ? emotionIcon.angryActive : emotionIcon.angryDisabled;
     default:
-      return selected ? <SosoFace /> : <DisabledSosoFace />;
+      return selected ? emotionIcon.sosoActive : emotionIcon.sosoDisabled;
   }
 };
 

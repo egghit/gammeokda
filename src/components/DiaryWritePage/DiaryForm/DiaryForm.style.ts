@@ -16,6 +16,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 90%;
   padding: 10px;
+  margin-bottom: 10px;
   background-color: ${({ theme }) => theme.color.primary};
   border: 6px solid ${({ theme }) => theme.color.primaryDark};
   border-radius: 15px;
@@ -29,10 +30,14 @@ export const Container = styled.div`
 
   textarea {
     width: 100%;
-    height: 100px;
+    height: 150px;
     color: ${({ theme }) => theme.color.black};
     border: 2px solid ${({ theme }) => theme.color.primaryDark};
     resize: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 `;
 
@@ -40,4 +45,12 @@ export const FlexRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+`;
+
+export const Button = styled.button`
+  svg {
+    width: 50px;
+    height: 50px;
+  }
 `;
