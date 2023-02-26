@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 
 import * as S from './Diary.style';
 
-const Diary = () => {
-  const [itemList, setItemList] = useState<any>([]);
+import { Diary } from '@/@types/types';
 
+const DiaryComponent = () => {
+  const [itemList, setItemList] = useState<Diary[]>([]);
   useEffect(() => {
     setItemList([
       {
@@ -64,4 +65,4 @@ const Diary = () => {
   );
 };
 
-export default Diary;
+export default DiaryComponent;
