@@ -22,7 +22,7 @@ const CalendarDiaryList = ({ diaryList, value }: any) => {
       <S.CalendarDiaryListEmpty>
         <S.EmptyImageWrapper>{emotion.sadActive}</S.EmptyImageWrapper>
         <S.EmptyText>작성된 일기가 없어요...</S.EmptyText>
-        <Link to="/diaries">
+        <Link to="/diarywrite">
           <S.WritePageButton>작성하러 가기</S.WritePageButton>
         </Link>
       </S.CalendarDiaryListEmpty>
