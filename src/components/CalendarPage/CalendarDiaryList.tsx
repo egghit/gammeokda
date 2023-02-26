@@ -4,11 +4,18 @@ import * as S from './CalendarDiaryList.style';
 
 import emotion from '@/assets/emotionIcon';
 import Diary from '@/components/DiaryListPage/Diary';
-import { dateformat } from '@/utils/date';
+import { dateformat, timestampToTime } from '@/utils/date';
 
 const CalendarDiaryList = ({ diaryList, value }: any) => {
   const diaryDate = dateformat(value);
-  const diaryListFiltered = diaryList.filter((diary: any) => diary.date === diaryDate);
+
+  const diaryListFiltered = diaryList.filter((diary: any) => {
+    const time = timestampToTime(diary.date.seconds);
+
+    const dateFormated = dateformat(time);
+
+    return dateFormated === diaryDate;
+  });
 
   if (diaryListFiltered.length === 0) {
     return (
