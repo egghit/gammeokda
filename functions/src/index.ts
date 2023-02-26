@@ -2,7 +2,6 @@ import * as cors from 'cors';
 import * as express from 'express';
 import * as functions from 'firebase-functions';
 
-import authRouter from './apis/auth';
 import diaryRouter from './apis/diary';
 import tamagotchiRouter from './apis/tamagotchi';
 
@@ -11,7 +10,6 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use('/auth', authRouter);
 app.use('/diary', diaryRouter);
 app.use('/tamagotchi', tamagotchiRouter);
 
