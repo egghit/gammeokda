@@ -30,7 +30,7 @@ export const SideIcons = styled.div`
   button {
     width: 100%;
     font-size: 24px;
-    color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.color.white};
   }
 `;
 
