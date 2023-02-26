@@ -1,15 +1,15 @@
-import { ReactComponent as Bar_0 } from './ProgressBar_0.svg';
-import { ReactComponent as Bar_10 } from './ProgressBar_10.svg';
-import { ReactComponent as Bar_100 } from './ProgressBar_100.svg';
-import { ReactComponent as Bar_20 } from './ProgressBar_20.svg';
-import { ReactComponent as Bar_30 } from './ProgressBar_30.svg';
-import { ReactComponent as Bar_40 } from './ProgressBar_40.svg';
-import { ReactComponent as Bar_50 } from './ProgressBar_50.svg';
-import { ReactComponent as Bar_60 } from './ProgressBar_60.svg';
-import { ReactComponent as Bar_70 } from './ProgressBar_70.svg';
-import { ReactComponent as Bar_80 } from './ProgressBar_80.svg';
-import { ReactComponent as Bar_90 } from './ProgressBar_90.svg';
-import { ReactComponent as Container } from './ProgressContainer.svg';
+import { ReactComponent as Bar_0 } from './progressBar_0.svg';
+import { ReactComponent as Bar_10 } from './progressBar_10.svg';
+import { ReactComponent as Bar_100 } from './progressBar_100.svg';
+import { ReactComponent as Bar_20 } from './progressBar_20.svg';
+import { ReactComponent as Bar_30 } from './progressBar_30.svg';
+import { ReactComponent as Bar_40 } from './progressBar_40.svg';
+import { ReactComponent as Bar_50 } from './progressBar_50.svg';
+import { ReactComponent as Bar_60 } from './progressBar_60.svg';
+import { ReactComponent as Bar_70 } from './progressBar_70.svg';
+import { ReactComponent as Bar_80 } from './progressBar_80.svg';
+import { ReactComponent as Bar_90 } from './progressBar_90.svg';
+import { ReactComponent as Container } from './progressContainer.svg';
 
 const Progress = {
   bar_0: <Bar_0 />,

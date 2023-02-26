@@ -17,7 +17,7 @@ export const ProgressWrapper = styled.div`
 
 export const GaugeWrapper = styled.div`
   position: absolute;
-  top: 40px;
+  top: 80px;
   div {
     font-size: 26px;
     color: ${({ theme }) => theme.color.white};
