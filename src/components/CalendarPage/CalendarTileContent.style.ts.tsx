@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CalendarTileContentWrapper = styled.div`
   position: relative;
   height: 50px;
+  display: flex;
 `;
 
 export const Emotion = styled.div`

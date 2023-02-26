@@ -33,6 +33,14 @@ const CalendarPage = () => {
           'https://images.unsplash.com/photo-1677309017319-8e4aa666f6f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2341&q=80',
         emotion: '쏘쏘',
       },
+      {
+        id: 4,
+        date: '2023-02-02',
+        text: '편견에 갇힌 여자가 저를 가둔 가타부타를 깨다 못해 박살내는 이야기. 그리고 그 혁명에 불을 지핀 기적같은 한 남자 이야기분명 뜨끈한 사랑 얘긴데, 맨날 사랑만 하진 않는 애기.진짜 사람들의 진짜 이야기여기 편견에 갇힌 한 여자가 있습니다. 아무도 그녀의 행복을 예상하지 못했죠. 우리 속 무심하고도 사소한 시선들이 그녀를 쉽게 재단하지만, 우리속 무심하고도 사소한 배려들이 그녀의 세상을 바꿀수도 있습니다. 편견에 갇힌 한 사람이 조금씩 틀을 깨고 나와 포효하기까지, 그 사소하지만 위대한 기적을 만들어 낸건 평범한 듯 안평범한 난 놈, 용식이였습니다. 만에게 무조건 직진으로 마음을 보여주는 촌므파탈의 폭격형 로맨스를 시작하면서 겪게되는 시골살이 생활밀찰형 로맨스적인 드라마입니다.',
+        photo:
+          'https://images.unsplash.com/photo-1677309017319-8e4aa666f6f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2341&q=80',
+        emotion: '화남',
+      },
     ]);
   }, []);
 
