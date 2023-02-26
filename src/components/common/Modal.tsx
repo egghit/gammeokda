@@ -21,7 +21,9 @@ const Modal = ({
   return (
     <S.ModalContainer>
       <img src={imagePath} width="399px" height="289px" />
-      <S.ModalCloseButton onClick={closeModal}>X</S.ModalCloseButton>
+      <S.ModalCloseButton onClick={closeModal}>
+        <img src="/close_icon.svg" />
+      </S.ModalCloseButton>
       <S.ModalText>{text}</S.ModalText>
       {buttonText && <S.ModalButton onClick={handleButtonEvent}>{buttonText}</S.ModalButton>}
     </S.ModalContainer>
