@@ -10,6 +10,7 @@ const color = {
   primaryDark: '#6F272F',
   secondary: '#813E3F',
   secondaryDark: '#6D3435',
+  titlePink: '#D99191',
 };
 
 export type ColorType = typeof color;
