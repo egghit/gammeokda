@@ -1,10 +1,10 @@
 import moment from 'moment';
 import { useEffect, useState } from 'react';
 import Calendar from 'react-calendar';
-import styled from 'styled-components';
 
 import * as S from './CalendarWapper.style';
 
+import commonIcon from '@/assets/commonIcon';
 import CalendarTileContent from '@/components/CalendarPage/CalendarTileContent';
 import { dateformat } from '@/utils/date';
 import 'react-calendar/dist/Calendar.css'; // css import
@@ -25,8 +25,8 @@ const CalendarWapper = ({ setValue, value, diaryList }: any) => {
         onChange={setValue}
         next2Label={null}
         prev2Label={null}
-        prevLabel={<img src="/left_arrow.svg" width={20} height={20} />}
-        nextLabel={<img src="/right_arrow.svg" width={20} height={20} />}
+        prevLabel={commonIcon.arrowLeft}
+        nextLabel={commonIcon.arrowRight}
         value={value}
         calendarType="US"
         formatDay={(locale, date) => moment(date).format('D')} // '일' 표시 x
@@ -38,7 +38,7 @@ const CalendarWapper = ({ setValue, value, diaryList }: any) => {
             return (
               <CalendarTileContent
                 isModal={dateFormated === diaryDate && showModal}
-                emotion={listFinded.contents.emotion}
+                emotion={listFinded.emotion}
                 showModal={showModal}
                 setShowModal={setShowModal}
               />
