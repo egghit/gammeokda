@@ -4,9 +4,12 @@ export const GNBContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  max-width: 34.5rem;
   position: fixed;
-  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0px;
 `;
 
 export const NavIcons = styled.div`
@@ -15,17 +18,23 @@ export const NavIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 100px;
 `;
-export const LeftIcons = styled.div`
-  width: 50%;
+
+export const SideIcons = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  div {
+  button {
     width: 100%;
     font-size: 24px;
-    color: ${(props) => props.theme.colors.white};
+    /* color: ${(props) => props.theme.colors.white}; */
   }
+`;
+
+export const HomeButton = styled.div`
+  position: absolute;
+  left: 40.5%;
+  top: -105px;
 `;

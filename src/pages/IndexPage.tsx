@@ -1,6 +1,5 @@
-import GNB_SVG from '@/assets/GNB';
 import GNB from '@/components/common/GNB';
-
+import ProgressBar from '@/components/MainPage/ProgressBar';
 const IndexPage = () => {
   return (
     <>
