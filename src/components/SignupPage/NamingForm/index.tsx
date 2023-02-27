@@ -1,4 +1,4 @@
-import { FormEventHandler, useState } from 'react';
+import { FormEventHandler } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import * as S from './NamingForm.style';
@@ -19,7 +19,7 @@ const NamingForm = () => {
     const name = data.get('name');
 
     localStorage.setItem('name', name?.toString() ?? DEFAULT_NAME);
-    navigate('/diaries');
+    navigate('/');
   };
 
   return (

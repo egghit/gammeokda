@@ -70,6 +70,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.color.black};
     border: 2px solid ${({ theme }) => theme.color.primaryDark};
     resize: none;
+    font-size: medium;
 
     &:focus {
       outline: none;
