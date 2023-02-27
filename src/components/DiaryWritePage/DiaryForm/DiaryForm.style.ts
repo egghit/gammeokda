@@ -48,7 +48,11 @@ export const FlexRow = styled.div`
   gap: 10px;
 `;
 
-export const Button = styled.button`
+export const HiddenInput = styled.input`
+  display: none;
+`;
+
+export const Label = styled.label`
   svg {
     width: 50px;
     height: 50px;
