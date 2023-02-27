@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import background from '@/assets/background.png';
+
 const GlobalStyles = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     font-size: 100%;
     font: inherit;
+    font-family: 'DNFBitBitTTF';
     vertical-align: baseline;
   }
 
@@ -29,6 +32,11 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     line-height: 1;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0;
   }
 
   ol, ul {
@@ -84,8 +92,16 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
   }
 
-  * {
+  body, * {
     font-family: 'DNFBitBitTTF';
+  }
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    background-image: url(${background});
+    background-size: 100% 100%;
   }
 `;
 

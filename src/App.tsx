@@ -1,27 +1,20 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from 'styled-components';
 
+import GNB from './components/common/GNB';
 import theme from './styles/theme';
 
 import CalendarPage from '@/pages/CalendarPage';
 import DiaryListPage from '@/pages/DiaryListPage';
 import DiaryWritePage from '@/pages/DiaryWritePage';
 import IndexPage from '@/pages/IndexPage';
+import SettingPage from '@/pages/SettingPage';
+import SigninPage from '@/pages/SigninPage';
+import SignupPage from '@/pages/SignupPage';
 import Test from '@/pages/Test';
 import GlobalStyle from '@/styles/reset';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <IndexPage />,
-  },
-  { path: 'calendar', element: <CalendarPage /> },
-  { path: 'diarywrite', element: <DiaryWritePage /> },
-  // TODO: test 페이지는 빌드 전, path 삭제해야 함 by.freya 230226
-  { path: 'test', element: <Test /> },
-  { path: 'diaries', element: <DiaryListPage /> },
-]);
+import '@/styles/override.css';
 
 const App = () => {
   return (
@@ -29,7 +22,17 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <RecoilRoot>
-          <RouterProvider router={router} />
+          <Routes>
+            <Route path="/" element={<IndexPage />} />
+            <Route path="/signin" element={<SigninPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/calendar" element={<CalendarPage />} />
+            <Route path="/write" element={<DiaryWritePage />} />
+            <Route path="/test" element={<Test />} />
+            <Route path="/diaries" element={<DiaryListPage />} />
+            <Route path="/setting" element={<SettingPage />} />
+          </Routes>
+          <GNB />
         </RecoilRoot>
       </ThemeProvider>
     </>

@@ -1,3 +1,5 @@
+import { DefaultTheme } from 'styled-components';
+
 const color = {
   white: '#FFFDFB',
   black: '#222222',
@@ -8,9 +10,12 @@ const color = {
   primaryDark: '#6F272F',
   secondary: '#813E3F',
   secondaryDark: '#6D3435',
+  titlePink: '#D99191',
 };
 
-const theme = {
+export type ColorType = typeof color;
+
+const theme: DefaultTheme = {
   color,
 };
 

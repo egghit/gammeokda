@@ -1,65 +1,76 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import * as S from './Diary.style';
 
-const Diary = () => {
-  const [itemList, setItemList] = useState<any>([]);
+import { DiaryContent } from '@/@types/types';
+import commonIcon from '@/assets/commonIcon';
+import AngryActive from '@/assets/emotionIcon/angry_active.svg';
+import DelightActive from '@/assets/emotionIcon/delight_active.svg';
+import HappyActive from '@/assets/emotionIcon/happy_active.svg';
+import SadActive from '@/assets/emotionIcon/sad_active.svg';
+import SosoActive from '@/assets/emotionIcon/soso_active.svg';
+import Modal from '@/components/common/Modal';
 
-  useEffect(() => {
-    setItemList([
-      {
-        id: '1224a3',
-        date: '2023-01-02',
-        text: '즐거웠다',
-        photo:
-          'https://images.unsplash.com/photo-1677309017319-8e4aa666f6f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2341&q=80',
-        emotion: '행복',
-      },
-      {
-        id: '45aa3',
-        date: '2023-01-04',
-        text: '',
-        photo:
-          'https://images.unsplash.com/photo-1677309017319-8e4aa666f6f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2341&q=80',
-        emotion: '슬픔',
-      },
-      {
-        id: '133aaa',
-        date: '2023-01-04',
-        text: '춤을 췄다.',
-        photo:
-          'https://images.unsplash.com/photo-1677309017319-8e4aa666f6f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2341&q=80',
-        emotion: '쏘쏘',
-      },
-    ]);
-  }, []);
+interface Props {
+  contents: DiaryContent;
+}
+
+type EmotionMapingType = {
+  [key: string]: string;
+};
+
+const Diary = (props: Props) => {
+  const { id, date, photo, text, emotion } = props.contents;
+
+  const [hasMoreContents, setHasMoreContents] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const showModal = () => {
+    setModalOpen(true);
+  };
+
+  const onClose = () => {
+    setModalOpen(false);
+  };
+
+  const EMOTION_ICONS: EmotionMapingType = {
+    화남: AngryActive,
+    기쁨: DelightActive,
+    행복: HappyActive,
+    슬픔: SadActive,
+    쏘쏘: SosoActive,
+  };
 
   return (
     <S.ItemWrapper>
-      {itemList.length > 0 ? (
-        <>
-          {itemList.map((i: any) => {
-            return (
-              <>
-                <div>
-                  <S.ActionButton>수정</S.ActionButton>
-                  <S.ActionButton>삭제</S.ActionButton>
-                </div>
-                <S.Info key={i?.id}>
-                  <img src="/good.png" alt="emotion" width="100px" height="100px" />
-                  <S.DiaryDate>{i?.date}</S.DiaryDate>
-                  <div>
-                    <p>다마고치를 키워보자</p>
-                    <img src={i?.photo} alt="photo" width="100px" height="100px" />
-                  </div>
-                </S.Info>
-              </>
-            );
-          })}
-        </>
-      ) : (
-        <p>일기가 없어요</p>
-      )}
+      {modalOpen && <Modal onClose={onClose} />}
+      <S.EditButtonWrapper>
+        <S.ActionButton onClick={showModal}>{commonIcon.editPencil}</S.ActionButton>
+        <S.ActionButton onClick={showModal}>{commonIcon.deleteTrash}</S.ActionButton>
+      </S.EditButtonWrapper>
+      <S.DiaryContentWarpper>
+        <S.Info key={id}>
+          <S.DateWrapper>
+            {emotion && <img src={EMOTION_ICONS[emotion]} alt="감정" />}
+            <S.DiaryDate>
+              {' '}
+              {new Intl.DateTimeFormat('ko', {
+                day: 'numeric',
+                weekday: 'long',
+              })
+                .format(new Date(date.seconds * 1000))
+                .replace('요일', '')}
+            </S.DiaryDate>
+          </S.DateWrapper>
+          <S.ContentWrapper hasMoreContents={!hasMoreContents}>
+            {text || '작성된 글이 없습니다.'}
+            {photo && <img src={photo} alt="photo" />}
+          </S.ContentWrapper>
+        </S.Info>
+        <S.ScrollButton onClick={() => setHasMoreContents(!hasMoreContents)}>
+          {hasMoreContents ? commonIcon.arrowUp : commonIcon.arrowDown}
+        </S.ScrollButton>
+      </S.DiaryContentWarpper>
     </S.ItemWrapper>
   );
 };
