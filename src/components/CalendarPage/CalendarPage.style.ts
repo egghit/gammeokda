@@ -7,21 +7,20 @@ export const CalendarPageContainer = styled.div`
 
 export const CalendarTabList = styled.div`
   display: flex;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 1rem;
   justify-content: center;
 `;
 
 export const CalendarTab = styled.div`
   color: ${({ theme }) => theme.color.primaryDark};
-  padding: 5px 20px;
-  border-bottom: 4px solid ${({ theme }) => theme.color.primaryDark};
+  padding: 0.25rem 1.25rem;
+  border-bottom: 0.25rem solid ${({ theme }) => theme.color.primaryDark};
   cursor: pointer;
 `;
 
 export const StatisticsTab = styled.div`
   color: ${({ theme }) => theme.color.primaryDimmed};
-  padding: 5px 20px;
-  border-bottom: 4px solid ${({ theme }) => theme.color.primaryDimmed};
+  padding: 0.25rem 1.25rem;
+  border-bottom: 0.25rem solid ${({ theme }) => theme.color.primaryDimmed};
   cursor: pointer;
 `;
