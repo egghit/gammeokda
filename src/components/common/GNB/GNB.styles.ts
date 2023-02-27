@@ -30,7 +30,7 @@ export const SideIcons = styled.div`
 `;
 
 interface GNBButtonProps {
-  isSelected: boolean;
+  isSelected?: boolean;
 }
 export const GNBButton = styled.button<GNBButtonProps>`
   width: 100%;
