@@ -20,6 +20,10 @@ const GNB = () => {
     return pathname === link;
   };
 
+  if (pathname === '/write') {
+    return null;
+  }
+
   return (
     <Style.GNBContainer>
       {GNB_SVG.container}
