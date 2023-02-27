@@ -4,21 +4,37 @@ import * as S from './Diary.style';
 
 import { DiaryContent } from '@/@types/types';
 import commonIcon from '@/assets/commonIcon';
-import emotionIcon from '@/assets/emotionIcon';
+import AngryActive from '@/assets/emotionIcon/angry_active.svg';
+import DelightActive from '@/assets/emotionIcon/delight_active.svg';
+import HappyActive from '@/assets/emotionIcon/happy_active.svg';
+import SadActive from '@/assets/emotionIcon/sad_active.svg';
+import SosoActive from '@/assets/emotionIcon/soso_active.svg';
 import Modal from '@/components/common/Modal';
 
 interface Props {
   contents: DiaryContent;
 }
 
+type EmotionMapingType = {
+  [key: string]: string;
+};
+
 const Diary = (props: Props) => {
-  const { id, date, photo, text } = props.contents;
+  const { id, date, photo, text, emotion } = props.contents;
 
   const [hasMoreContents, setHasMoreContents] = useState<boolean>(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const showModal = () => {
     setModalOpen(true);
+  };
+
+  const EMOTION_ICONS: EmotionMapingType = {
+    화남: AngryActive,
+    기쁨: DelightActive,
+    행복: HappyActive,
+    슬픔: SadActive,
+    쏘쏘: SosoActive,
   };
 
   return (
@@ -31,8 +47,9 @@ const Diary = (props: Props) => {
       <S.DiaryContentWarpper>
         <S.Info key={id}>
           <S.DateWrapper>
-            {emotionIcon.delightActive}
+            {emotion && <img src={EMOTION_ICONS[emotion]} alt="감정" />}
             <S.DiaryDate>
+              {' '}
               {new Intl.DateTimeFormat('ko', {
                 day: 'numeric',
                 weekday: 'long',

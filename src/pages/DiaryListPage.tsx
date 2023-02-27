@@ -12,13 +12,15 @@ const List = () => {
   const [itemList, setItemList] = useState<DiaryContent[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const getDiaryListData: () => Promise<void> = async () => {
+  const getDiaryTestData: () => Promise<void> = async () => {
     try {
       const query = await getDocs(collection(db, 'diary'));
-      const data: Array<DiaryContent> = [];
-      query.forEach((document: any) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const data: any[] = [];
+      query.forEach((document) => {
         return data.push(document.data());
       });
+
       setItemList(data);
     } catch (error) {
       // eslint-disable-next-line no-console
@@ -27,7 +29,7 @@ const List = () => {
   };
 
   useEffect(() => {
-    getDiaryListData();
+    getDiaryTestData();
   }, []);
 
   const scrollToTop = () => {
@@ -60,8 +62,8 @@ const List = () => {
         </S.SortButtonWrapper>
       </S.DiaryListHeader>
       <>
-        {itemList?.length > 0 ? (
-          itemList?.map((contents: any) => <Diary key={contents.id} contents={contents} />)
+        {itemList.length > 0 ? (
+          itemList?.map((contents: DiaryContent) => <Diary key={contents.id} contents={contents} />)
         ) : (
           <p>일기가 없어요</p>
         )}

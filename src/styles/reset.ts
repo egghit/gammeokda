@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     font-size: 100%;
     font: inherit;
+    font-family: 'DNFBitBitTTF';
     vertical-align: baseline;
   }
 
@@ -31,6 +32,11 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     line-height: 1;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0;
   }
 
   ol, ul {
