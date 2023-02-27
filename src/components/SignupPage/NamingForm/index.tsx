@@ -1,13 +1,16 @@
 import { FormEventHandler } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
 
 import * as S from './NamingForm.style';
 
 import { ReactComponent as DamagochiEgg } from '@/assets/damagochi_egg.svg';
 import Button from '@/components/common/Button';
+import { damagochiState } from '@/store/damagochiState';
 
 const NamingForm = () => {
   const navigate = useNavigate();
+  const [damagochi, setDamagochi] = useRecoilState(damagochiState);
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -18,7 +21,9 @@ const NamingForm = () => {
     const data = new FormData(target);
     const name = data.get('name');
 
-    localStorage.setItem('name', name?.toString() ?? DEFAULT_NAME);
+    // localStorage.setItem('name', name?.toString() ?? DEFAULT_NAME);
+    setDamagochi({ ...damagochi, name: name?.toString() ?? DEFAULT_NAME });
+
     navigate('/');
   };
 

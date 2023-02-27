@@ -1,5 +1,6 @@
 import { FormEventHandler, Fragment, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
 
 import * as S from './DiaryForm.style';
 
@@ -7,10 +8,12 @@ import type { Emotion } from '@/@types/types';
 import { ReactComponent as SpeechBubbleFrame } from '@/assets/SpeechBubble.svg';
 import Button from '@/components/common/Button';
 import EmotionIcon from '@/components/DiaryWritePage/EmotionIcon';
+import { damagochiState } from '@/store/damagochiState';
 
 const DiaryForm = () => {
   const emotions: Emotion[] = ['happy', 'delight', 'default', 'sad', 'angry'];
   const [selectedEmotion, setSelectedEmotion] = useState<Emotion>('default');
+  const [damagochi, setDamagochi] = useRecoilState(damagochiState);
 
   const navigate = useNavigate();
 
@@ -28,6 +31,8 @@ const DiaryForm = () => {
     };
 
     // post 요청
+    setDamagochi({ ...damagochi, diaryCounting: damagochi.diaryCounting + 1 });
+
     navigate('/', { state: { state: selectedEmotion } });
   };
 
