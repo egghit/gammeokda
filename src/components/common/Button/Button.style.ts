@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+import { ButtonProps } from '.';
+
+export const Button = styled.button<ButtonProps>`
   position: relative;
   display: flex;
   align-items: center;
@@ -9,7 +11,7 @@ export const Button = styled.button`
   height: 90px;
   text-align: center;
   color: ${({ theme }) => theme.color.white};
-  font-size: large;
+  font-size: ${({ fontSize }) => fontSize ?? 'large'};
 
   svg {
     position: absolute;

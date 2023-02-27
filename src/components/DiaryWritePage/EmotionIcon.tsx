@@ -1,7 +1,6 @@
 import { Emotion } from '@/@types/types';
 import emotionIcon from '@/assets/emotionIcon';
 
-
 interface EmotionIconProps {
   category: Emotion;
   selected: boolean;
