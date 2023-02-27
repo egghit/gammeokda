@@ -20,8 +20,8 @@ const DiaryForm = () => {
       <S.Container>
         <p>오늘의 감정은 어때?</p>
         <S.FlexRow>
-          {emotions.map((emotion, index) => (
-            <S.Button type={'button'} key={index} onClick={() => handleEmotionClick(emotion)}>
+          {emotions.map((emotion) => (
+            <S.Button type={'button'} key={emotion} onClick={() => handleEmotionClick(emotion)}>
               <EmotionIcon category={emotion} selected={true} />
             </S.Button>
           ))}
