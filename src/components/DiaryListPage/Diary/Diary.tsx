@@ -9,6 +9,7 @@ import DelightActive from '@/assets/emotionIcon/delight_active.svg';
 import HappyActive from '@/assets/emotionIcon/happy_active.svg';
 import SadActive from '@/assets/emotionIcon/sad_active.svg';
 import SosoActive from '@/assets/emotionIcon/soso_active.svg';
+import Modal from '@/components/common/Modal';
 
 interface Props {
   contents: DiaryContent;
@@ -19,9 +20,14 @@ type EmotionMapingType = {
 };
 
 const Diary = (props: Props) => {
-  const { id, photo, text, emotion } = props.contents;
+  const { id, date, photo, text, emotion } = props.contents;
 
   const [hasMoreContents, setHasMoreContents] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const showModal = () => {
+    setModalOpen(true);
+  };
 
   const EMOTION_ICONS: EmotionMapingType = {
     화남: AngryActive,
@@ -33,15 +39,24 @@ const Diary = (props: Props) => {
 
   return (
     <S.ItemWrapper>
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
       <S.EditButtonWrapper>
-        <S.ActionButton>{commonIcon.editPencil}</S.ActionButton>
-        <S.ActionButton>{commonIcon.deleteTrash}</S.ActionButton>
+        <S.ActionButton onClick={showModal}>{commonIcon.editPencil}</S.ActionButton>
+        <S.ActionButton onClick={showModal}>{commonIcon.deleteTrash}</S.ActionButton>
       </S.EditButtonWrapper>
       <S.DiaryContentWarpper>
         <S.Info key={id}>
           <S.DateWrapper>
             {emotion && <img src={EMOTION_ICONS[emotion]} alt="감정" />}
-            <S.DiaryDate>2일 금</S.DiaryDate>
+            <S.DiaryDate>
+              {' '}
+              {new Intl.DateTimeFormat('ko', {
+                day: 'numeric',
+                weekday: 'long',
+              })
+                .format(new Date(date.seconds * 1000))
+                .replace('요일', '')}
+            </S.DiaryDate>
           </S.DateWrapper>
           <S.ContentWrapper hasMoreContents={!hasMoreContents}>
             {text || '작성된 글이 없습니다.'}

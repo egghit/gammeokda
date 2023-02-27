@@ -1,13 +1,10 @@
 import { collection, getDocs, doc, setDoc, Timestamp } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { DiaryContent } from '@/@types/types';
-import Modal from '@/components/common/Modal';
 import { db } from '@/firebase';
 
 const Test = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-
   const getDiaryTestData: () => Promise<void> = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, 'diary'));
@@ -44,20 +41,9 @@ const Test = () => {
     getDiaryTestData();
   }, []);
 
-  // 모달 사용방법 예시
-  const showModal = () => {
-    setModalOpen(true);
-  };
-
-  const onClose = () => {
-    setModalOpen(false);
-  };
-
   return (
     <div>
-      {modalOpen && <Modal onClose={onClose} />}
       <button onClick={() => postDiaryTestData(diaryData)}>버튼</button>
-      <button onClick={showModal}>모달 열기</button>
     </div>
   );
 };
