@@ -15,6 +15,7 @@ const DiaryForm = () => {
   const [selectedEmotion, setSelectedEmotion] = useState<Emotion>('default');
   const [damagochi, setDamagochi] = useRecoilState(damagochiState);
 
+
   const navigate = useNavigate();
 
   const onPost: FormEventHandler<HTMLFormElement> = (e) => {
@@ -32,7 +33,6 @@ const DiaryForm = () => {
 
     // post 요청
     setDamagochi({ ...damagochi, diaryCounting: damagochi.diaryCounting + 1 });
-
     navigate('/', { state: { state: selectedEmotion } });
   };
 
