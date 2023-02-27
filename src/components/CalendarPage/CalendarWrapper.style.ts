@@ -72,6 +72,8 @@ export const CalendarContainer = styled.div`
   }
 
   .react-calendar__month-view__days__day {
+    width: 40px;
+
     > abbr {
       color: ${({ theme }) => theme.color.primaryDark};
     }
