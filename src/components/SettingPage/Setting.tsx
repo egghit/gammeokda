@@ -3,18 +3,22 @@ import { useState } from 'react';
 import * as S from './Setting.style';
 
 import Modal from '@/components/common/Modal';
-import { Container } from '@/components/DiaryListPage/DiaryListPage.style';
 import { GITHUB_PAGE_LINK } from '@/constants';
 
 const Setting = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const showModal = () => {
-    setModalOpen(true);
+    setIsModalOpen(true);
+  };
+
+  const onClose = () => {
+    setIsModalOpen(false);
   };
 
   return (
-    <Container>
-      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+    <>
+      {isModalOpen && <Modal onClose={onClose} />}
       <S.MenuWrapper>
         <S.SettingTitle>고객 센터</S.SettingTitle>
         <S.MenuItemWrapper>
@@ -33,7 +37,7 @@ const Setting = () => {
           <S.SettingMenuButton onClick={showModal}>회원 탈퇴</S.SettingMenuButton>
         </S.MenuItemWrapper>
       </S.MenuWrapper>
-    </Container>
+    </>
   );
 };
 
