@@ -3,12 +3,14 @@ import { useEffect, useState } from 'react';
 
 import { DiaryContent } from '@/@types/types';
 import commonIcon from '@/assets/commonIcon';
+import Modal from '@/components/common/Modal';
 import Diary from '@/components/DiaryListPage/Diary';
 import * as S from '@/components/DiaryListPage/DiaryListPage.style';
 import { db } from '@/firebase';
 
 const List = () => {
   const [itemList, setItemList] = useState<DiaryContent[]>([]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const getDiaryTestData: () => Promise<void> = async () => {
     try {
@@ -37,15 +39,27 @@ const List = () => {
     });
   };
 
+  const showModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <S.Container>
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
       <S.DiaryListHeader>
         <S.MonthWrapper>
-          {commonIcon.arrowLeft}
-          <S.DateText>2023년 3월</S.DateText>
-          {commonIcon.arrowRight}
+          <button onClick={showModal}>{commonIcon.arrowLeft}</button>
+          <S.DateText>
+            {new Intl.DateTimeFormat('ko', {
+              year: 'numeric',
+              month: 'long',
+            }).format(new Date())}
+          </S.DateText>
+          <button onClick={showModal}>{commonIcon.arrowRight}</button>
         </S.MonthWrapper>
-        <S.SortButtonWrapper>{commonIcon.arrowSort}</S.SortButtonWrapper>
+        <S.SortButtonWrapper>
+          <button onClick={showModal}>{commonIcon.arrowSort}</button>
+        </S.SortButtonWrapper>
       </S.DiaryListHeader>
       <>
         {itemList.length > 0 ? (
