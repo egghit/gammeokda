@@ -17,7 +17,7 @@ const CalendarTileContent = ({
 }: CalendarTileContentProps) => {
   return (
     <S.CalendarTileContentWrapper>
-      {isModal && <CalendarTileModal emotion={emotion} />}
+      {/* {isModal && <CalendarTileModal emotion={emotion} />} */}
       <S.Emotion
         onClick={() => {
           setShowModal(!showModal);
