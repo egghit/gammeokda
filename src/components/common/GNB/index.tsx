@@ -1,8 +1,9 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import * as Style from './GNB.styles';
+import * as S from './GNB.styles';
 
 import GNB_SVG from '@/assets/GNB';
+
 const LEFT_LINKS = [
   { title: '공유', link: '' },
   { title: '추억', link: '/diaries' },
@@ -25,34 +26,26 @@ const GNB = () => {
   }
 
   return (
-    <Style.GNBContainer>
+    <S.GNBContainer>
       {GNB_SVG.container}
-      <Style.NavIcons>
-        <Style.SideIcons>
-          {LEFT_LINKS.map((link) => (
-            <Style.GNBButton
-              key={link.title}
-              onClick={() => navigate(link.link)}
-              isSelected={isSelected(link.link)}
-            >
-              {link.title}
-            </Style.GNBButton>
+      <S.NavIcons>
+        <S.SideIcons>
+          {LEFT_LINKS.map(({ title, link }) => (
+            <S.GNBButton key={title} onClick={() => navigate(link)} isSelected={isSelected(link)}>
+              {title}
+            </S.GNBButton>
           ))}
-        </Style.SideIcons>
-        <Style.HomeButton onClick={() => navigate('/')}>{GNB_SVG.homeButton}</Style.HomeButton>
-        <Style.SideIcons>
-          {RIGHT_LINKS.map((link) => (
-            <Style.GNBButton
-              key={link.title}
-              onClick={() => navigate(link.link)}
-              isSelected={isSelected(link.link)}
-            >
-              {link.title}
-            </Style.GNBButton>
+        </S.SideIcons>
+        <S.HomeButton onClick={() => navigate('/')}>{GNB_SVG.homeButton}</S.HomeButton>
+        <S.SideIcons>
+          {RIGHT_LINKS.map(({ title, link }) => (
+            <S.GNBButton key={title} onClick={() => navigate(link)} isSelected={isSelected(link)}>
+              {title}
+            </S.GNBButton>
           ))}
-        </Style.SideIcons>
-      </Style.NavIcons>
-    </Style.GNBContainer>
+        </S.SideIcons>
+      </S.NavIcons>
+    </S.GNBContainer>
   );
 };
 

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const GNBContainer = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5rem;
+  max-width: 36.5rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  max-width: 36.5rem;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  bottom: -75px;
 `;
 
 export const NavIcons = styled.div`

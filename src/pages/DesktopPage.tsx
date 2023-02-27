@@ -1,21 +1,22 @@
 import styled from 'styled-components';
 
+const DesktopPage = () => {
+  return (
+    <Container>
+      <p>감정을 먹는 다마고치</p>
+    </Container>
+  );
+};
+
 export const Container = styled.section`
   width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 2rem auto 12rem auto;
 
   @media screen and (max-width: 768px) {
-    width: 480px;
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 100vw;
-    max-width: 100vw;
-    min-height: 98px;
-    padding: 0 0.5rem;
+    display: none;
   }
 `;
+
+export default DesktopPage;
