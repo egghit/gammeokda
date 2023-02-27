@@ -9,12 +9,14 @@ import DiaryListPage from '@/pages/DiaryListPage';
 import DiaryWritePage from '@/pages/DiaryWritePage';
 import IndexPage from '@/pages/IndexPage';
 import SigninPage from '@/pages/SigninPage';
+import SignupPage from '@/pages/SignupPage';
 import Test from '@/pages/Test';
 import GlobalStyle from '@/styles/reset';
 
 const router = createBrowserRouter([
   { path: '/', element: <IndexPage /> },
   { path: '/signin', element: <SigninPage /> },
+  { path: '/signup', element: <SignupPage /> },
   { path: 'calendar', element: <CalendarPage /> },
   { path: 'diarywrite', element: <DiaryWritePage /> },
   // TODO: test 페이지는 빌드 전, path 삭제해야 함 by.freya 230226
