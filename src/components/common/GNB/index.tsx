@@ -11,6 +11,8 @@ const RIGHT_LINKS = [
   { title: '설정', link: '/setting' },
 ];
 
+const noShowGNB = ['/write', '/signin', '/signup'];
+
 const GNB = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
@@ -24,10 +26,9 @@ const GNB = () => {
     setShowModal((prev) => !prev);
   };
 
-  if (pathname === '/write') {
+  if (noShowGNB.includes(pathname)) {
     return null;
   }
-
   return (
     <>
       <S.GNBContainer>
