@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react';
+import { useRecoilState } from 'recoil';
 
 import * as S from './progressBar.styles';
 
 import Progress from '@/assets/progressBar';
-import { DamagochiAgeTypes } from '@/pages/IndexPage';
+import { damagochiState } from '@/store/damagochiState';
 
-interface ProgressBarProps {
-  age: DamagochiAgeTypes;
-  diaryCounting: number;
-}
-
-const GROW_COUNT = {
+export const GROW_COUNT = {
   egg: 3,
   baby: 30,
   adult: 0,
 };
 
-const ProgressBar = ({ age, diaryCounting }: ProgressBarProps) => {
+const ProgressBar = () => {
   const [percent, setPercent] = useState(0);
+  const [damagochi, setDamagochi] = useRecoilState(damagochiState);
+  const { age, diaryCounting } = damagochi;
 
   const growthRest =
     GROW_COUNT[`${age}`] - diaryCounting > 0 ? GROW_COUNT[`${age}`] - diaryCounting : 0;

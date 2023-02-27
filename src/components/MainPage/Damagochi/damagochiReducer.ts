@@ -35,7 +35,10 @@ type DamagochiState = {
 export const damagochiInitailState: DamagochiState = {
   animation: 'default',
 };
-export const damagochiReducer: React.Reducer<DamagochiState, DamagochiAction> = (state, action) => {
+export const damagochiAniReducer: React.Reducer<DamagochiState, DamagochiAction> = (
+  state,
+  action,
+) => {
   switch (action) {
     case 'angry':
       return { ...state, animation: 'angry' };

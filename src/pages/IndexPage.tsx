@@ -1,35 +1,46 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
+import { useRecoilState } from 'recoil';
 
 import { Container } from './index.style';
 
-import GNB from '@/components/common/GNB';
 import Damagochi from '@/components/MainPage/Damagochi';
-import ProgressBar from '@/components/MainPage/ProgressBar';
+import ProgressBar, { GROW_COUNT } from '@/components/MainPage/ProgressBar';
+import { damagochiState } from '@/store/damagochiState';
 
 export type DamagochiAgeTypes = 'egg' | 'baby' | 'adult';
 
-interface UserDateProps {
-  age: DamagochiAgeTypes;
-  name: string;
-}
-const DEFAULT_NAME = '곶감이';
-
 const IndexPage = () => {
-  const [isGrow, setIsGrow] = useState(false);
+  const [damamgochi, setDamagochi] = useRecoilState(damagochiState);
+  const { age, diaryCounting } = damamgochi;
 
-  //유저 데이터로
-  const userDate: UserDateProps = {
-    age: 'egg',
-    name: localStorage.getItem('name') || DEFAULT_NAME,
+  const growDamagochi = () => {
+    switch (age) {
+      case 'egg': {
+        setTimeout(() => {
+          setDamagochi({ ...damamgochi, age: 'baby' });
+        }, 2000);
+        break;
+      }
+      case 'baby': {
+        setTimeout(() => {
+          setDamagochi({ ...damamgochi, age: 'adult' });
+        }, 2000);
+        break;
+      }
+    }
   };
 
-  // 몇개의 다이어리가 있는지
-  const diaryCounting = 0;
+  useEffect(() => {
+    if (diaryCounting === GROW_COUNT[`${age}`]) {
+      setDamagochi({ ...damamgochi, isGrow: true });
+      growDamagochi();
+    }
+  }, [diaryCounting, age]);
+
   return (
     <Container>
-      <ProgressBar diaryCounting={diaryCounting} age={userDate.age} />
-      <Damagochi age={userDate.age} name={userDate.name} isGrow={isGrow} setIsGrow={setIsGrow} />
-      <GNB />
+      <ProgressBar />
+      <Damagochi />
     </Container>
   );
 };

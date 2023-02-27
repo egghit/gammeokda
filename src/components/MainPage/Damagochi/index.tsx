@@ -1,35 +1,37 @@
-import { Dispatch, SetStateAction, useEffect, useReducer, useState } from 'react';
+
+import { useEffect, useReducer, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
 
 import * as S from './damagochi.styels';
 import {
   caseInitialState,
   caseReducer,
   damagochiInitailState,
-  damagochiReducer,
+  damagochiAniReducer,
   DamagochiAction,
 } from './damagochiReducer';
 
 import { DamagochiAnimation } from '@/assets/damagochi';
 import DamagochiTheme from '@/assets/damagochiCase';
 import Modal from '@/components/common/Modal';
+import { damagochiState } from '@/store/damagochiState';
 
-interface DamagochiProps {
-  name: string;
-  age: 'egg' | 'baby' | 'adult';
-  isGrow: boolean;
-  setIsGrow: Dispatch<SetStateAction<boolean>>;
-}
 
-const Damagochi = ({ name, age, isGrow, setIsGrow }: DamagochiProps) => {
+const Damagochi = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { state } = location;
   const [caseTheme, caseDispatch] = useReducer(caseReducer, caseInitialState);
-  const [damagochiState, damagochiDispatch] = useReducer(damagochiReducer, damagochiInitailState);
+  const [damagochiAniState, damagochiAniDispatch] = useReducer(
+    damagochiAniReducer,
+    damagochiInitailState,
+  );
+  const [damagochi, setDamagochi] = useRecoilState(damagochiState);
   const [showModal, setShowModal] = useState(false);
 
-  const damagochiAnimation = DamagochiAnimation[`${age}`][`${damagochiState.animation}`];
+  const { name, age, isGrow } = damagochi;
+  const damagochiAnimation = DamagochiAnimation[`${age}`][`${damagochiAniState.animation}`];
 
   const isIOSSafari = navigator.userAgent.match(/like Mac OS X/i) ? true : false;
 
@@ -41,19 +43,19 @@ const Damagochi = ({ name, age, isGrow, setIsGrow }: DamagochiProps) => {
   };
 
   const handelAnimation = (action: DamagochiAction) => {
-    damagochiDispatch(action);
+    damagochiAniDispatch(action);
     setTimeout(
       () => {
-        damagochiDispatch('default');
+        damagochiAniDispatch('default');
       },
-      action === 'growth' ? 1000 : 4000,
+      action === 'growth' ? 2000 : 4000,
     );
   };
 
   useEffect(() => {
     if (isGrow) {
-      setIsGrow(false);
-      return handelAnimation('growth');
+      handelAnimation('growth');
+      return;
     }
     if (state) {
       handelAnimation(state.state);
