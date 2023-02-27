@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 
-import DamagochiGreeting from '@/components/DiaryWritePage/DamagochiGreeting';
 import DiaryForm from '@/components/DiaryWritePage/DiaryForm';
+import GobackButton from '@/components/DiaryWritePage/GobackButton';
 
 const DiaryWritePage = () => {
   return (
     <Container>
-      <DamagochiGreeting />
+      <GobackButton />
       <DiaryForm />
     </Container>
   );
 };
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
