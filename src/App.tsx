@@ -17,8 +17,8 @@ import '@/styles/override.css';
 
 const router = createBrowserRouter([
   { path: '/', element: <IndexPage /> },
-  { path: '/signin', element: <SigninPage /> },
-  { path: '/signup', element: <SignupPage /> },
+  { path: 'signin', element: <SigninPage /> },
+  { path: 'signup', element: <SignupPage /> },
   { path: 'calendar', element: <CalendarPage /> },
   { path: 'write', element: <DiaryWritePage /> },
   // TODO: test 페이지는 빌드 전, path 삭제해야 함 by.freya 230226
