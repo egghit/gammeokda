@@ -7,14 +7,6 @@ import sadAnimation from './baby_sad.webm';
 import strokeAnimation from './baby_stroke.webm';
 import { makeDamagochiAnimation } from '../damagochiAdult';
 
-// const makeDamagochiAnimation = (webp: string) => {
-//   return (
-//     <video width="120px" height="120px" autoPlay loop muted>
-//       <source src={webp} type="video/webm" />
-//     </video>
-//   );
-// };
-
 const BabyAnimation = {
   angry: makeDamagochiAnimation(angryAnimation),
   sad: makeDamagochiAnimation(sadAnimation),
