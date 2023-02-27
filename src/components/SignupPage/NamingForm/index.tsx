@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import * as S from './NamingForm.style';
 
 import { ReactComponent as DamagochiEgg } from '@/assets/damagochi_egg.svg';
+import Button from '@/components/common/Button';
 
 const NamingForm = () => {
   const [name, setName] = useState('곶감이');
@@ -29,7 +30,7 @@ const NamingForm = () => {
         한번 지은 이름은 변경이 불가하니 <br />
         신중하게 지어주세요!
       </S.Alert>
-      <button>공통 컴포넌트로 변경 예정</button>
+      <Button fontSize="x-large">함께하기</Button>
     </S.Form>
   );
 };
