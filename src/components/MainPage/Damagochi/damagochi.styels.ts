@@ -15,7 +15,9 @@ export const CharName = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   h1 {
+    color: ${({ theme }) => theme.color.black};
     font-size: 22px;
   }
 `;
@@ -39,7 +41,8 @@ const ButtonPos = styled.button`
   position: absolute;
   bottom: 80px;
   width: 30px;
-  font-size: 16px;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.color.black};
 `;
 
 export const LeftButton = styled(ButtonPos)`

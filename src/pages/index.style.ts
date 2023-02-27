@@ -8,8 +8,14 @@ export const Container = styled.section`
   align-items: center;
   margin: 2rem auto 12rem auto;
 
-  @media screen and (max-width: 400px) {
-    width: 340px;
+  @media screen and (max-width: 768px) {
+    width: 480px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100vw;
+    max-width: 100vw;
     min-height: 98px;
+    padding: 0 0.5rem;
   }
 `;

@@ -8,13 +8,13 @@ interface EmotionIconProps {
 
 const EmotionIcon = ({ category, selected }: EmotionIconProps) => {
   switch (category) {
-    case '행복':
+    case 'happy':
       return selected ? emotionIcon.happyActive : emotionIcon.happyDisabled;
-    case '기쁨':
+    case 'delight':
       return selected ? emotionIcon.delightActive : emotionIcon.delightDisabled;
-    case '슬픔':
+    case 'sad':
       return selected ? emotionIcon.sadActive : emotionIcon.sadDisabled;
-    case '화남':
+    case 'angry':
       return selected ? emotionIcon.angryActive : emotionIcon.angryDisabled;
     default:
       return selected ? emotionIcon.sosoActive : emotionIcon.sosoDisabled;
