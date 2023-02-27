@@ -16,6 +16,11 @@ const CalendarPage = () => {
   const showModal = () => {
     setModalOpen(true);
   };
+
+  const onClose = () => {
+    setModalOpen(false);
+  };
+
   const getDiaryTestData: () => Promise<void> = async () => {
     try {
       const query = await getDocs(collection(db, 'diary'));
@@ -38,7 +43,7 @@ const CalendarPage = () => {
 
   return (
     <S.CalendarPageContainer>
-      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+      {modalOpen && <Modal onClose={onClose} />}
       <S.CalendarTabList>
         <S.CalendarTab>달력</S.CalendarTab>
         <S.StatisticsTab onClick={showModal}>통계</S.StatisticsTab>
