@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  margin-top: 50px;
 `;
 
 export const ProgressWrapper = styled.div`
@@ -18,8 +16,9 @@ export const ProgressWrapper = styled.div`
 export const GaugeWrapper = styled.div`
   position: absolute;
   top: 80px;
+
   div {
-    font-size: 26px;
+    font-size: 1.5rem;
     color: ${({ theme }) => theme.color.white};
     text-align: center;
   }

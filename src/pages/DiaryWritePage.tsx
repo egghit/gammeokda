@@ -1,25 +1,23 @@
-import styled from 'styled-components';
+import { Container } from './index.style';
 
 import DiaryForm from '@/components/DiaryWritePage/DiaryForm';
 import GobackButton from '@/components/DiaryWritePage/GobackButton';
 
 const DiaryWritePage = () => {
   return (
-    <Container>
+    <Container
+      style={{
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <GobackButton />
       <DiaryForm />
     </Container>
   );
 };
-
-const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-`;
 
 export default DiaryWritePage;

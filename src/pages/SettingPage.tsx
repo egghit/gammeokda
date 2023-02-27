@@ -1,12 +1,12 @@
-import * as S from './index.style';
+import { Container } from './index.style';
 
 import Setting from '@/components/SettingPage/Setting';
 
 const SettingPage = () => {
   return (
-    <S.Container>
+    <Container>
       <Setting />
-    </S.Container>
+    </Container>
   );
 };
 
