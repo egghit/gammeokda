@@ -1,6 +1,8 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 
+import { Container } from './index.style';
+
 import { DiaryContent } from '@/@types/types';
 import commonIcon from '@/assets/commonIcon';
 import Modal from '@/components/common/Modal';
@@ -48,7 +50,7 @@ const List = () => {
   };
 
   return (
-    <S.Container>
+    <Container>
       {modalOpen && <Modal onClose={onClose} />}
       <S.DiaryListHeader>
         <S.MonthWrapper>
@@ -75,7 +77,7 @@ const List = () => {
       <S.UpButtonWrapper>
         <S.ScrollToTopButton onClick={scrollToTop}>맨 위로 ▲</S.ScrollToTopButton>
       </S.UpButtonWrapper>
-    </S.Container>
+    </Container>
   );
 };
 

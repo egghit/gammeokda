@@ -1,5 +1,25 @@
 import styled from 'styled-components';
 
+export const IntroContainer = styled.div`
+  display: flex;
+  flex-direction column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+`;
+
+export const ServiceTitle = styled.p`
+  color: ${(props) => props.theme.color.primaryDark};
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+
+  & > p {
+    color: ${(props) => props.theme.color.primary};
+    font-size: 1.5rem;
+  }
+`;
+
 export const MenuWrapper = styled.section`
   display: flex;
   flex-direction: column;
