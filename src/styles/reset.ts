@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     font-size: 100%;
     font: inherit;
+    font-family: 'DNFBitBitTTF';
     vertical-align: baseline;
   }
 
