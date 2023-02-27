@@ -4,18 +4,25 @@ import * as S from './CalendarDiaryList.style';
 
 import emotion from '@/assets/emotionIcon';
 import Diary from '@/components/DiaryListPage/Diary';
-import { dateformat } from '@/utils/date';
+import { dateformat, timestampToTime } from '@/utils/date';
 
 const CalendarDiaryList = ({ diaryList, value }: any) => {
   const diaryDate = dateformat(value);
-  const diaryListFiltered = diaryList.filter((diary: any) => diary.date === diaryDate);
+
+  const diaryListFiltered = diaryList.filter((diary: any) => {
+    const time = timestampToTime(diary.date.seconds);
+
+    const dateFormated = dateformat(time);
+
+    return dateFormated === diaryDate;
+  });
 
   if (diaryListFiltered.length === 0) {
     return (
       <S.CalendarDiaryListEmpty>
         <S.EmptyImageWrapper>{emotion.sadActive}</S.EmptyImageWrapper>
         <S.EmptyText>작성된 일기가 없어요...</S.EmptyText>
-        <Link to="/diaries">
+        <Link to="/write">
           <S.WritePageButton>작성하러 가기</S.WritePageButton>
         </Link>
       </S.CalendarDiaryListEmpty>
