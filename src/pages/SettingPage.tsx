@@ -1,12 +1,20 @@
-import * as S from './index.style';
+import { Container } from './index.style';
 
 import Setting from '@/components/SettingPage/Setting';
 
 const SettingPage = () => {
   return (
-    <S.Container>
+    <Container
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '90%',
+      }}
+    >
       <Setting />
-    </S.Container>
+    </Container>
   );
 };
 

@@ -6,7 +6,7 @@ import * as S from './CalendarWrapper.style';
 
 import commonIcon from '@/assets/commonIcon';
 import CalendarTileContent from '@/components/CalendarPage/CalendarTileContent';
-import { dateformat } from '@/utils/date';
+import { dateformat, timestampToTime } from '@/utils/date';
 import 'react-calendar/dist/Calendar.css'; // css import
 
 const CalendarWrapper = ({ setValue, value, diaryList }: any) => {
@@ -32,7 +32,12 @@ const CalendarWrapper = ({ setValue, value, diaryList }: any) => {
         formatDay={(locale, date) => moment(date).format('D')} // '일' 표시 x
         tileContent={({ date }) => {
           const dateFormated = dateformat(date);
-          const listFinded = diaryList.find((diary: any) => diary.date === dateFormated);
+          const listFinded = diaryList.find((diary: any) => {
+            const time = timestampToTime(diary.date.seconds);
+            const timeFormated = dateformat(time);
+
+            return timeFormated === dateFormated;
+          });
 
           if (listFinded) {
             return (
