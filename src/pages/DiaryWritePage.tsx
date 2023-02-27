@@ -12,6 +12,7 @@ const DiaryWritePage = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        margin: '0rem auto 4rem auto',
       }}
     >
       <GobackButton />
