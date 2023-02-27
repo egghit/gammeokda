@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import * as Style from './GNB.styles';
+import * as S from './GNB.styles';
 
 import GNB_SVG from '@/assets/GNB';
 const LEFT_LINKS = [
@@ -25,34 +25,34 @@ const GNB = () => {
   }
 
   return (
-    <Style.GNBContainer>
+    <S.GNBContainer>
       {GNB_SVG.container}
-      <Style.NavIcons>
-        <Style.SideIcons>
+      <S.NavIcons>
+        <S.SideIcons>
           {LEFT_LINKS.map((link) => (
-            <Style.GNBButton
+            <S.GNBButton
               key={link.title}
               onClick={() => navigate(link.link)}
               isSelected={isSelected(link.link)}
             >
               {link.title}
-            </Style.GNBButton>
+            </S.GNBButton>
           ))}
-        </Style.SideIcons>
-        <Style.HomeButton onClick={() => navigate('/')}>{GNB_SVG.homeButton}</Style.HomeButton>
-        <Style.SideIcons>
+        </S.SideIcons>
+        <S.HomeButton onClick={() => navigate('/')}>{GNB_SVG.homeButton}</S.HomeButton>
+        <S.SideIcons>
           {RIGHT_LINKS.map((link) => (
-            <Style.GNBButton
+            <S.GNBButton
               key={link.title}
               onClick={() => navigate(link.link)}
               isSelected={isSelected(link.link)}
             >
               {link.title}
-            </Style.GNBButton>
+            </S.GNBButton>
           ))}
-        </Style.SideIcons>
-      </Style.NavIcons>
-    </Style.GNBContainer>
+        </S.SideIcons>
+      </S.NavIcons>
+    </S.GNBContainer>
   );
 };
 
