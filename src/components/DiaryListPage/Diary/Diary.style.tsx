@@ -24,7 +24,7 @@ export const DateWrapper = styled.div`
   margin-right: 1rem;
   text-align: center;
 
-  svg {
+  img {
     width: 80%;
     height: 100%;
   }
