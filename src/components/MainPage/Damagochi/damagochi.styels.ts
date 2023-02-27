@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 
-export const Layout = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-export const Container = styled.div`
   position: relative;
 `;
 

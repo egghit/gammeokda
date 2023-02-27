@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import * as S from './Setting.style';
 
+import { ReactComponent as DamagochiEgg } from '@/assets/damagochi_egg.svg';
 import Modal from '@/components/common/Modal';
 import { GITHUB_PAGE_LINK } from '@/constants';
 
@@ -19,6 +20,15 @@ const Setting = () => {
   return (
     <>
       {isModalOpen && <Modal onClose={onClose} />}
+      <S.IntroContainer>
+        <DamagochiEgg width="10rem" height="10rem" />
+        <S.ServiceTitle>
+          감정을 먹는
+          <br />
+          다마고치
+          <p>열심히 준비중이에요!</p>
+        </S.ServiceTitle>
+      </S.IntroContainer>
       <S.MenuWrapper>
         <S.SettingTitle>고객 센터</S.SettingTitle>
         <S.MenuItemWrapper>
