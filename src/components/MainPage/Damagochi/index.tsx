@@ -63,7 +63,7 @@ const Damagochi = ({ name, age, isGrow, setIsGrow }: DamagochiProps) => {
         </Style.CharName>
         <Style.Character>{damagochiAnimation}</Style.Character>
         <Style.LeftButton onClick={() => handelAnimation('stroke')}>쓰다듬기</Style.LeftButton>
-        <Style.CenterButton onClick={() => navigate('/diarywrite')}>감정주기</Style.CenterButton>
+        <Style.CenterButton onClick={() => navigate('/write')}>감정주기</Style.CenterButton>
         <Style.RightButton onClick={handleTheme}>테마변경</Style.RightButton>
       </Style.Container>
     </Style.Layout>
