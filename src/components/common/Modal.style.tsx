@@ -41,7 +41,7 @@ export const ModalCloseButton = styled.button`
 `;
 
 export const ModalText = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: ${(props) => props.theme.color.primaryDark};
 `;
 
