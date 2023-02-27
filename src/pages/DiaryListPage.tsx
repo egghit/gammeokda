@@ -43,9 +43,13 @@ const List = () => {
     setModalOpen(true);
   };
 
+  const onClose = () => {
+    setModalOpen(false);
+  };
+
   return (
     <S.Container>
-      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+      {modalOpen && <Modal onClose={onClose} />}
       <S.DiaryListHeader>
         <S.MonthWrapper>
           <button onClick={showModal}>{commonIcon.arrowLeft}</button>

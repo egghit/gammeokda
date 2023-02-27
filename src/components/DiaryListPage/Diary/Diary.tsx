@@ -29,6 +29,10 @@ const Diary = (props: Props) => {
     setModalOpen(true);
   };
 
+  const onClose = () => {
+    setModalOpen(false);
+  };
+
   const EMOTION_ICONS: EmotionMapingType = {
     화남: AngryActive,
     기쁨: DelightActive,
@@ -39,7 +43,7 @@ const Diary = (props: Props) => {
 
   return (
     <S.ItemWrapper>
-      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+      {modalOpen && <Modal onClose={onClose} />}
       <S.EditButtonWrapper>
         <S.ActionButton onClick={showModal}>{commonIcon.editPencil}</S.ActionButton>
         <S.ActionButton onClick={showModal}>{commonIcon.deleteTrash}</S.ActionButton>
