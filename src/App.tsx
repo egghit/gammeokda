@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import GNB from './components/common/GNB';
 import theme from './styles/theme';
 
-import useGoogleAnalytics from '@/hooks/useGoogleAnalytics';
 import CalendarPage from '@/pages/CalendarPage';
 import DiaryListPage from '@/pages/DiaryListPage';
 import DiaryWritePage from '@/pages/DiaryWritePage';
@@ -18,8 +17,6 @@ import GlobalStyle from '@/styles/reset';
 import '@/styles/override.css';
 
 const App = () => {
-  useGoogleAnalytics();
-
   return (
     <>
       <ThemeProvider theme={theme}>
