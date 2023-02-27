@@ -49,9 +49,13 @@ const Test = () => {
     setModalOpen(true);
   };
 
+  const onClose = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div>
-      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+      {modalOpen && <Modal onClose={onClose} />}
       <button onClick={() => postDiaryTestData(diaryData)}>버튼</button>
       <button onClick={showModal}>모달 열기</button>
     </div>
