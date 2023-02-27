@@ -4,8 +4,8 @@ export const GNBContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 34.5rem;
   position: fixed;
+  max-width: 36.5rem;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -27,11 +27,15 @@ export const SideIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  button {
-    width: 100%;
-    font-size: 24px;
-    color: ${(props) => props.theme.color.white};
-  }
+`;
+
+interface GNBButtonProps {
+  isSelected: boolean;
+}
+export const GNBButton = styled.button<GNBButtonProps>`
+  width: 100%;
+  font-size: 24px;
+  color: ${(props) => (props.isSelected ? props.theme.color.primaryDark : props.theme.color.white)};
 `;
 
 export const HomeButton = styled.div`

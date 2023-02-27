@@ -1,7 +1,10 @@
 import * as S from './Modal.style';
 
+import { ReactComponent as CloseButton } from '@/assets/commonIcon/close.svg';
+import SadActive from '@/assets/emotionIcon/sad_active.svg';
+
 interface Props {
-  setModalOpen: (isOpen: boolean) => void;
+  onClose: () => void;
   text?: string;
   imagePath?: string;
   buttonText?: string;
@@ -9,21 +12,18 @@ interface Props {
 }
 
 const Modal = ({
-  setModalOpen,
+  onClose,
   text = '아직 준비중입니다....',
-  imagePath = '/우는얼굴.svg',
+  imagePath,
   buttonText,
   handleButtonEvent,
 }: Props) => {
-  const closeModal = () => {
-    setModalOpen(false);
-  };
   return (
     <S.Dimmer>
       <S.ModalContainer>
-        <img src={imagePath} width="200px" height="194px" alt="sad" />
-        <S.ModalCloseButton onClick={closeModal}>
-          <img src="/close_icon.svg" alt="close_button" />
+        <img src={imagePath || SadActive} width="180rem" height="150rem" alt="sad" />
+        <S.ModalCloseButton onClick={onClose} aria-label="close">
+          <CloseButton width="2rem" height="2rem" />
         </S.ModalCloseButton>
         <S.ModalText>{text}</S.ModalText>
         {buttonText && <S.ModalButton onClick={handleButtonEvent}>{buttonText}</S.ModalButton>}
