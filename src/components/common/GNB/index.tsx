@@ -28,8 +28,6 @@ const GNB = () => {
     return null;
   }
 
-  console.log(showModal);
-
   return (
     <>
       <S.GNBContainer>

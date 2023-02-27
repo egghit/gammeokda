@@ -50,7 +50,7 @@ const Damagochi = ({ name, age, isGrow, setIsGrow }: DamagochiProps) => {
       return handelAnimation('growth');
     }
     if (state) {
-      handelAnimation(state);
+      handelAnimation(state.state);
     }
   }, [state, isGrow]);
 

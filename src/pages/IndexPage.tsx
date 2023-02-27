@@ -21,11 +21,11 @@ const IndexPage = () => {
   };
 
   // 몇개의 다이어리가 있는지
-  const diaryCounting = 3;
+  const diaryCounting = 1;
   return (
     <>
       <ProgressBar diaryCounting={diaryCounting} age={userDate.age} />
-      <Damagochi age={'baby'} name={'곶감이'} isGrow={isGrow} setIsGrow={setIsGrow} />
+      <Damagochi age={userDate.age} name={userDate.name} isGrow={isGrow} setIsGrow={setIsGrow} />
       <GNB />
     </>
   );
