@@ -11,7 +11,8 @@ export const IntroContainer = styled.div`
 
 export const ServiceTitle = styled.p`
   color: ${(props) => props.theme.color.primaryDark};
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
 
   & > p {
     color: ${(props) => props.theme.color.primary};

@@ -4,7 +4,15 @@ import Setting from '@/components/SettingPage/Setting';
 
 const SettingPage = () => {
   return (
-    <Container>
+    <Container
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '90%',
+      }}
+    >
       <Setting />
     </Container>
   );
