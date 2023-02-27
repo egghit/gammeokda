@@ -31,7 +31,7 @@ const Test = () => {
 
   const diaryData: DiaryContent = {
     date: Timestamp.fromDate(new Date('December 10, 2022')),
-    emotion: '기쁨',
+    emotion: 'happy',
     photo: 'http://',
     text: 'test string',
     id: '1',

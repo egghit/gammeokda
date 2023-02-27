@@ -1,4 +1,4 @@
-export type Emotion = '기쁨' | '슬픔' | '행복' | '쏘쏘' | '화남';
+export type Emotion = 'happy' | 'delight' | 'default' | 'sad' | 'angry';
 
 export interface DiaryContent {
   id: string;

@@ -9,8 +9,8 @@ import Button from '@/components/common/Button';
 import EmotionIcon from '@/components/DiaryWritePage/EmotionIcon';
 
 const DiaryForm = () => {
-  const emotions: Emotion[] = ['행복', '기쁨', '쏘쏘', '슬픔', '화남'];
-  const [selectedEmotion, setSelectedEmotion] = useState<Emotion>('쏘쏘');
+  const emotions: Emotion[] = ['happy', 'delight', 'default', 'sad', 'angry'];
+  const [selectedEmotion, setSelectedEmotion] = useState<Emotion>('default');
 
   const navigate = useNavigate();
 
@@ -28,8 +28,7 @@ const DiaryForm = () => {
     };
 
     // post 요청
-    console.log(body);
-    navigate(-1);
+    navigate('/', { state: { state: selectedEmotion } });
   };
 
   return (
