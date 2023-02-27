@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const CalendarDiaryListEmpty = styled.div`
-  border: 4px solid ${({ theme }) => theme.color.primaryDark};
-  border-radius: 15px;
+  width: 90%;
+  border: 0.25rem solid ${({ theme }) => theme.color.primaryDark};
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px 0;
+  padding: 2rem 0;
+  margin-top: 1.5rem;
 `;
 
 export const EmptyImageWrapper = styled.div`
@@ -23,9 +25,9 @@ export const EmptyText = styled.span`
 `;
 
 export const WritePageButton = styled.button`
-  font-size: 24px;
+  font-size: 1.5rem;
   background-color: ${({ theme }) => theme.color.primaryDark};
   color: white;
-  padding: 10px 20px;
-  border-radius: 14px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 1rem;
 `;

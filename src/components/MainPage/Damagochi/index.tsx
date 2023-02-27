@@ -62,20 +62,18 @@ const Damagochi = ({ name, age, isGrow, setIsGrow }: DamagochiProps) => {
 
   return (
     <>
-      <S.Layout>
-        <S.Container>
-          {DamagochiTheme[caseTheme]}
-          <S.CharName>
-            <h1>{name}</h1>
-          </S.CharName>
-          <S.Character>{damagochiAnimation}</S.Character>
-          <S.LeftButton onClick={handleTheme}>테마변경</S.LeftButton>
-          <S.CenterButton onClick={() => navigate('/write')}>감정주기</S.CenterButton>
-          <S.RightButton onClick={isIOSSafari ? handelModal : () => handelAnimation('stroke')}>
-            쓰다듬기
-          </S.RightButton>
-        </S.Container>
-      </S.Layout>
+      <S.Container>
+        {DamagochiTheme[caseTheme]}
+        <S.CharName>
+          <h1>{name}</h1>
+        </S.CharName>
+        <S.Character>{damagochiAnimation}</S.Character>
+        <S.LeftButton onClick={handleTheme}>테마변경</S.LeftButton>
+        <S.CenterButton onClick={() => navigate('/write')}>감정주기</S.CenterButton>
+        <S.RightButton onClick={isIOSSafari ? handelModal : () => handelAnimation('stroke')}>
+          쓰다듬기
+        </S.RightButton>
+      </S.Container>
       {showModal && <Modal onClose={handelModal} text="IOS환경에서는 지원되지 않습니다." />}
     </>
   );

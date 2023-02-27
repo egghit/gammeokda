@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const CalendarContainer = styled.div`
+  margin-bottom: 1rem;
+
   .react-calendar {
     width: 100%;
     background-color: transparent;
@@ -15,7 +17,7 @@ export const CalendarContainer = styled.div`
   }
 
   .react-calendar__navigation {
-    width: 240px;
+    width: max-content;
     margin: 0 auto;
   }
 
@@ -28,6 +30,7 @@ export const CalendarContainer = styled.div`
     text-align: center;
     font-size: 24px;
   }
+
   .react-calendar__tile--now {
     background-color: transparent;
     :hover {
@@ -59,6 +62,7 @@ export const CalendarContainer = styled.div`
       height: 20px;
     }
   }
+
   .react-calendar__month-view__weekdays__weekday {
     color: ${({ theme }) => theme.color.primaryDark};
     > abbr {
@@ -72,14 +76,21 @@ export const CalendarContainer = styled.div`
       color: ${({ theme }) => theme.color.primaryDark};
     }
   }
+
   .react-calendar__month-view__days__day--weekend {
     > abbr {
       color: #d10000;
     }
   }
+
+  .react-calendar__navigation__label {
+    width: max-content;
+  }
+
   .react-calendar__navigation__label__labelText {
     font-size: 32px;
   }
+
   .react-calendar__navigation {
     margin-bottom: 48px;
   }

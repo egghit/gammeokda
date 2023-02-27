@@ -50,7 +50,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   padding: 0.625rem;
   margin-bottom: 0.625rem;
   background-color: ${({ theme }) => theme.color.primary};

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { Container } from './index.style';
+
 import GNB from '@/components/common/GNB';
 import Damagochi from '@/components/MainPage/Damagochi';
 import ProgressBar from '@/components/MainPage/ProgressBar';
@@ -24,11 +26,11 @@ const IndexPage = () => {
   // 몇개의 다이어리가 있는지
   const diaryCounting = 0;
   return (
-    <>
+    <Container>
       <ProgressBar diaryCounting={diaryCounting} age={userDate.age} />
       <Damagochi age={userDate.age} name={userDate.name} isGrow={isGrow} setIsGrow={setIsGrow} />
       <GNB />
-    </>
+    </Container>
   );
 };
 
