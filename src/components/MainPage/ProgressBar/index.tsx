@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import * as Style from './progressBar.styles';
+import * as S from './progressBar.styles';
 
 import Progress from '@/assets/progressBar';
 import { DamagochiAgeTypes } from '@/pages/IndexPage';
@@ -31,15 +31,15 @@ const ProgressBar = ({ age, diaryCounting }: ProgressBarProps) => {
   }, [diaryCounting]);
 
   return (
-    <Style.Container>
-      <Style.ProgressWrapper>{Progress.container}</Style.ProgressWrapper>
-      <Style.GaugeWrapper>
+    <S.Container>
+      <S.ProgressWrapper>{Progress.container}</S.ProgressWrapper>
+      <S.GaugeWrapper>
         <div>
           당신의 감정 {rest}개가 <br />더 궁금해요!
         </div>
         {Progress.bar[`${percent}`]}
-      </Style.GaugeWrapper>
-    </Style.Container>
+      </S.GaugeWrapper>
+    </S.Container>
   );
 };
 
