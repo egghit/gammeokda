@@ -10,6 +10,7 @@ interface UserDateProps {
   age: DamagochiAgeTypes;
   name: string;
 }
+const DEFAULT_NAME = '곶감이';
 
 const IndexPage = () => {
   const [isGrow, setIsGrow] = useState(false);
@@ -17,11 +18,11 @@ const IndexPage = () => {
   //유저 데이터로
   const userDate: UserDateProps = {
     age: 'egg',
-    name: '곶감이',
+    name: localStorage.getItem('name') || DEFAULT_NAME,
   };
 
   // 몇개의 다이어리가 있는지
-  const diaryCounting = 1;
+  const diaryCounting = 0;
   return (
     <>
       <ProgressBar diaryCounting={diaryCounting} age={userDate.age} />
