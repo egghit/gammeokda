@@ -8,7 +8,7 @@
         </a>
 <img src="https://img.shields.io/badge/egghit-0072ef?style=for-the-badge" style = 'margin-right : 1px;'/>
 <img src="https://img.shields.io/badge/다마고치-F76C00?style=for-the-badge" style = 'margin-right : 1px;'/>
-<img src="https://img.shields.io/badge/감정일기-4fc08d?style=for-the-badge" style = 'margin-right : 1px;' />  
+<img src="https://img.shields.io/badge/감정일기-4fc08d?style=for-the-badge" style = 'margin-right : 1px;' />
 
 </div>
 </h1>
@@ -25,35 +25,41 @@
 매일 일기를 쓰고 싶지만 귀찮았던 분들,
 하루의 감정을 기록하고 싶은 분들,
 특별한 하루를 기록해두고 싶은 분들
-다마고치와 함께 추억을 기록해봐요!   
+다마고치와 함께 추억을 기록해봐요!
 ```
-## 기술 스택
-<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=Vercel&logoColor=white">
- <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
- <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styled components&logoColor=white"> 
-<img src ="https://img.shields.io/badge/-TypeScript-informational?&style=for-the-badge&logo=TypeScript&logoColor=white" />
-<img src="https://img.shields.io/badge/Recoil-61DAFB?style=for-the-badge&logo=Recoil&logoColor=black">
-<img src="https://img.shields.io/badge/Firebase-yellow?style=for-the-badge&logo=Firebase">
 
+## 기술 스택
+
+<div>
+<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=Vercel&logoColor=white"/>
+ <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black"/>
+ <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styled components&logoColor=white"/> 
+<img src ="https://img.shields.io/badge/-TypeScript-informational?&style=for-the-badge&logo=TypeScript&logoColor=white" />
+<img src="https://img.shields.io/badge/Recoil-61DAFB?style=for-the-badge&logo=Recoil&logoColor=black"/>
+<img src="https://img.shields.io/badge/Firebase-yellow?style=for-the-badge&logo=Firebase"/>
+</div>
 <br/>
 
 ## 🗓 프로젝트 기간
+
 > 2023.02.22 ~ 2023.02.27
+
 <!-- - 아이디어 회의 : 2023.02.22 ~ 2023.02.24
 - 디자인 및 개발 :  2023.02.25 ~ 2023.02.26
 - 발표 : 2023.2.27 -->
 
-| 진행     | 기간          |
-| -------- | ------------- |
-| 아이디어 회의 | 2023.02.22 ~ 2023.02.24 |
+| 진행           | 기간                    |
+| -------------- | ----------------------- |
+| 아이디어 회의  | 2023.02.22 ~ 2023.02.24 |
 | 디자인 및 개발 | 2023.02.25 ~ 2023.02.26 |
-| 발표 | 2023.2.27 |
+| 발표           | 2023.2.27               |
 
-## 🙋‍♂️ Team Egghit :  알(Egg)에서 나온 8명(Eight)의 팀이 만드는 다마고치!
+## 🙋‍♂️ Team Egghit : 알(Egg)에서 나온 8명(Eight)의 팀이 만드는 다마고치!
+
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href=""><img src="https://user-images.githubusercontent.com/104412610/221498588-46a5e39d-8ba9-453b-883d-b373a8966c1f.gif" width="120px;" height="120px" alt=""/><br /><sub><b>@우니</b></sub></a><br/></td>
+        <td align="center"><img src="https://user-images.githubusercontent.com/104412610/221533753-229a5191-b00f-4d8d-adc9-ca1cd1718cb4.gif" width="120px;" height="120px" alt=""/><br /><sub><a href=""><b>@우니</b></a></sub><br/></td>
       <td align="center"><a href="https://github.com/ssxst31"><img src="https://avatars.githubusercontent.com/u/86470977?v=4" width="120px;" alt=""/><br /><sub><b>@Palanbyul</b></sub></a><br/></td>
       <td align="center"><a href="https://github.com/Dae-une"><img src="https://avatars.githubusercontent.com/u/104764474?v=4" width="120px;" alt=""/><br /><sub><b>@Dae-une</b></sub></a><br/></td>
         <td align="center"><a href="https://github.com/solbi9382"><img src="https://avatars.githubusercontent.com/u/26318691?v=4" width="120px;" alt=""/><br /><sub><b>@sbshin</b></sub></a><br/></td>
@@ -83,15 +89,17 @@ sodalite1204</b></sub></a><br/></td>
 <br>
 
 ## 🎀 서비스 소개
+
 [감.먹.다(감정을 먹는 다마고치) 시작하기](https://gammeokda.vercel.app)
 
-<img src ='https://i.imgur.com/KSyYwnu.png' height ='350px' /> 
+<img src ='https://i.imgur.com/KSyYwnu.png' height ='350px' />
 
 #### 메인화면
+
 - 나의 다마고치 <b>상태</b>를 확인할 수 있어요.
 - <b>쓰다듬기 버튼</b>을 누르면 춤추는 다마고치를 보실 수 있어요!
 - 일기를 통해 감정이 공유된 <b>다마고치</b>를 보실 수 있어요!
-- 다마고치 <b>테마</b>를 변경할 수 있어요. 
+- 다마고치 <b>테마</b>를 변경할 수 있어요.
 
 <div>
 <img src="https://user-images.githubusercontent.com/104412610/221510399-99837af9-5c3b-434f-8fb0-5524b57d349a.gif" width="175px;" height="300px" alt="animation"/>
@@ -101,6 +109,7 @@ sodalite1204</b></sub></a><br/></td>
 </div>
 
 #### 다이어리
+
 - 하루를 기록하고, 다마고치와 감정을 <b>공유</b>할 수 있어요!
 - 일기를 쓰면 다마고치가 점점 <b>성장</b>해요~
 - 어떤 내용을 써야할 지 모를 땐, <b>다마고치의 질문</b>을 확인해보세요
@@ -110,19 +119,20 @@ sodalite1204</b></sub></a><br/></td>
 </div>
 
 #### 달력
-- 기록된 내 <b>감정</b>을 확인할 수 있어요 
+
+- 기록된 내 <b>감정</b>을 확인할 수 있어요
 - 일기를 작성하면 그날의 <b>내 감정</b>을 모두 볼 수 있어요.
 <div>
 <img src="https://user-images.githubusercontent.com/104412610/221508497-75474da9-ee83-4f80-949e-9b7eacd4aba7.gif" width="200px;" height="350px" alt=""/>  
 </div>
 
 #### 설정
+
 - 기타 <b>문의 사항</b>을 확인할 수 있어요!
 
 <img src="https://i.imgur.com/u5sZ9rD.png" width="200px;" height="350px" alt="setting"/>
 
-
-## ❔ FAQ 
+## ❔ FAQ
 
 <details>
 <summary> 피드백 및 문의는 어디로 해야하나요? </summary>
