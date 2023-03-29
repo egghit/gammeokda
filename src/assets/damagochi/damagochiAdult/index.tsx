@@ -6,16 +6,16 @@ import sadAnimation from './adult_sad.svg';
 import strokeAnimation from './adult_stroke.svg';
 import * as S from './SpriteStyle.styles';
 
-export const MakeDamagochiAnimation = ({ svg }: { svg: string }) => {
+export const makeDamagochiAnimation = (svg: string) => {
   return <S.ImageContainer src={svg} />;
 };
 
 const AdultAnimation = {
-  angry: <MakeDamagochiAnimation svg={angryAnimation} />,
-  sad: <MakeDamagochiAnimation svg={sadAnimation} />,
-  happy: <MakeDamagochiAnimation svg={happyAnimation} />,
-  stroke: <MakeDamagochiAnimation svg={strokeAnimation} />,
-  delight: <MakeDamagochiAnimation svg={delightAnimation} />,
+  angry: makeDamagochiAnimation(angryAnimation),
+  sad: makeDamagochiAnimation(sadAnimation),
+  happy: makeDamagochiAnimation(happyAnimation),
+  stroke: makeDamagochiAnimation(strokeAnimation),
+  delight: makeDamagochiAnimation(delightAnimation),
   growth: <Adult />,
   default: <Adult />,
 };

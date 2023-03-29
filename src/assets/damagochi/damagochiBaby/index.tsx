@@ -5,15 +5,15 @@ import growthAnimation from './baby_growth.svg';
 import happyAnimation from './baby_happy.svg';
 import sadAnimation from './baby_sad.svg';
 import strokeAnimation from './baby_stroke.svg';
-import { MakeDamagochiAnimation } from '../damagochiAdult';
+import { makeDamagochiAnimation } from '../damagochiAdult';
 
 const BabyAnimation = {
-  angry: <MakeDamagochiAnimation svg={angryAnimation} />,
-  sad: <MakeDamagochiAnimation svg={sadAnimation} />,
-  happy: <MakeDamagochiAnimation svg={happyAnimation} />,
-  stroke: <MakeDamagochiAnimation svg={strokeAnimation} />,
-  delight: <MakeDamagochiAnimation svg={delightAnimation} />,
-  growth: <MakeDamagochiAnimation svg={growthAnimation} />,
+  angry: makeDamagochiAnimation(angryAnimation),
+  sad: makeDamagochiAnimation(sadAnimation),
+  happy: makeDamagochiAnimation(happyAnimation),
+  stroke: makeDamagochiAnimation(strokeAnimation),
+  delight: makeDamagochiAnimation(delightAnimation),
+  growth: makeDamagochiAnimation(growthAnimation),
 
   default: <Baby />,
 };
