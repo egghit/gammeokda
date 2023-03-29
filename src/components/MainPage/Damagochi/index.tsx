@@ -1,4 +1,3 @@
-
 import { useEffect, useReducer, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
@@ -17,7 +16,6 @@ import DamagochiTheme from '@/assets/damagochiCase';
 import Modal from '@/components/common/Modal';
 import { damagochiState } from '@/store/damagochiState';
 
-
 const Damagochi = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -33,7 +31,8 @@ const Damagochi = () => {
   const { name, age, isGrow } = damagochi;
   const damagochiAnimation = DamagochiAnimation[`${age}`][`${damagochiAniState.animation}`];
 
-  const isIOSSafari = navigator.userAgent.match(/like Mac OS X/i) ? true : false;
+  // 우선 ios 테스트 해보기 위해 둘다 false로 변경해두었습니다.
+  const isIOSSafari = navigator.userAgent.match(/like Mac OS X/i) ? false : false;
 
   const handleTheme = () => {
     caseDispatch('click');
@@ -44,12 +43,10 @@ const Damagochi = () => {
 
   const handelAnimation = (action: DamagochiAction) => {
     damagochiAniDispatch(action);
-    setTimeout(
-      () => {
-        damagochiAniDispatch('default');
-      },
-      action === 'growth' ? 2000 : 4000,
-    );
+    setTimeout(() => {
+      damagochiAniDispatch('default');
+      // 애니메이션 변경 시간은 4초로 바꿨습니다. growth
+    }, 4000);
   };
 
   useEffect(() => {
