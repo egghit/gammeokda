@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import logo from '@/assets/logo.png';
 
-const DesktopPage = () => {
+const DesktopCard = () => {
   return (
     <Container>
       <Card>
@@ -21,7 +21,7 @@ const DesktopPage = () => {
   );
 };
 
-export const Container = styled.section`
+const Container = styled.section`
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ export const Container = styled.section`
   }
 `;
 
-export const Card = styled.div`
+const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,4 +60,4 @@ export const Card = styled.div`
   }
 `;
 
-export default DesktopPage;
+export default DesktopCard;

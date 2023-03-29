@@ -1,5 +1,4 @@
-import { Container } from './index.style';
-
+import Container from '@/components/common/Container';
 import DiaryForm from '@/components/DiaryWritePage/DiaryForm';
 import GobackButton from '@/components/DiaryWritePage/GobackButton';
 

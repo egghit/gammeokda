@@ -1,10 +1,9 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 
-import { Container } from './index.style';
-
 import { DiaryContent } from '@/@types/types';
 import commonIcon from '@/assets/commonIcon';
+import Container from '@/components/common/Container';
 import Modal from '@/components/common/Modal';
 import Diary from '@/components/DiaryListPage/Diary';
 import * as S from '@/components/DiaryListPage/DiaryListPage.style';

@@ -3,8 +3,8 @@ import { ThemeProvider } from 'styled-components';
 
 import theme from './styles/theme';
 
+import Layout from '@/components/common/Layout';
 import useGoogleAnalytics from '@/hooks/useGoogleAnalytics';
-import Layout from '@/pages/Layout';
 import Routes from '@/routes';
 import GlobalStyle from '@/styles/reset';
 

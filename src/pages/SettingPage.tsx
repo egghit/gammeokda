@@ -1,5 +1,4 @@
-import { Container } from './index.style';
-
+import Container from '@/components/common/Container';
 import Setting from '@/components/SettingPage/Setting';
 
 const SettingPage = () => {

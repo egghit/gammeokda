@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 
-import { Container } from './index.style';
-
+import Container from '@/components/common/Container';
 import Damagochi from '@/components/MainPage/Damagochi';
 import ProgressBar, { GROW_COUNT } from '@/components/MainPage/ProgressBar';
 import { damagochiState } from '@/store/damagochiState';
