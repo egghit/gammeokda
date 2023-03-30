@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
 const Container = styled.section`
-  width: 100%;
+  width: 420px;
+  height: 100vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 2rem auto 12rem auto;
-
-  @media screen and (max-width: 768px) {
-    width: 480px;
-  }
+  justify-content: flex-start;
+  padding: 32px 10px 180px 10px;
 
   @media screen and (max-width: 480px) {
     width: 100vw;
-    max-width: 100vw;
-    min-height: 98px;
-    padding: 0 0.5rem;
+    height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
   }
 `;
 

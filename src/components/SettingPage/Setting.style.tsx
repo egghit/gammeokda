@@ -25,7 +25,6 @@ export const MenuWrapper = styled.section`
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  height: 100%;
   margin-bottom: 1rem;
 `;
 

@@ -27,9 +27,9 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 0 10px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;

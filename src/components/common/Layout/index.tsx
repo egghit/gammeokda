@@ -24,11 +24,13 @@ const Layout = ({ router }: LayoutProps) => {
 const MainContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 `;
 
 const PageContainer = styled.div`
   position: relative;
+  height: 100vh;
+  overflow-y: hidden;
 `;
 
 export default Layout;
