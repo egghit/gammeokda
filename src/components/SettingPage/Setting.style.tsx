@@ -9,7 +9,7 @@ export const IntroContainer = styled.div`
   margin-bottom: 2rem;
 `;
 
-export const ServiceTitle = styled.p`
+export const ServiceTitle = styled.div`
   color: ${(props) => props.theme.color.primaryDark};
   font-size: 2rem;
   margin-bottom: 0.25rem;

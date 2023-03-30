@@ -31,13 +31,15 @@ const ProgressBar = () => {
 
   return (
     <S.Container>
-      <S.ProgressWrapper>{Progress.container}</S.ProgressWrapper>
-      <S.GaugeWrapper>
-        <div>
-          당신의 감정 {growthRest}개가 <br />더 궁금해요!
-        </div>
-        {Progress.bar[`${percent}`]}
-      </S.GaugeWrapper>
+      <S.ProgressWrapper>
+        {Progress.container}
+        <S.GaugeWrapper>
+          <div>
+            당신의 감정 {growthRest}개가 <br />더 궁금해요!
+          </div>
+          {Progress.bar[`${percent}`]}
+        </S.GaugeWrapper>
+      </S.ProgressWrapper>
     </S.Container>
   );
 };
