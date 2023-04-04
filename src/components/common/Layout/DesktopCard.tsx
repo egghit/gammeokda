@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import logo from '@/assets/logo.png';
+import { DESKTOP_VW } from '@/constants';
 
 const DesktopCard = () => {
   return (
@@ -29,7 +30,7 @@ const Container = styled.section`
   justify-content: center;
   margin: 0 10px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: ${DESKTOP_VW}) {
     display: none;
   }
 `;
