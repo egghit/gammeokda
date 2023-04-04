@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
 
-import * as S from './progressBar.styles';
+import * as S from './ProgressBar.styles';
 
 import Progress from '@/assets/progressBar';
 import { damagochiState } from '@/store/damagochiState';
