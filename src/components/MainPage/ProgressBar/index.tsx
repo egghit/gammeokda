@@ -29,15 +29,17 @@ const ProgressBar = () => {
     accGrowthPercent();
   }, [diaryCounting]);
 
+  const GaugeBar = Progress.Bar[percent];
+
   return (
     <S.Container>
       <S.ProgressWrapper>
-        {Progress.container}
+        <Progress.Container />
         <S.GaugeWrapper>
           <div>
             당신의 감정 {growthRest}개가 <br />더 궁금해요!
           </div>
-          {Progress.bar[`${percent}`]}
+          <GaugeBar />;
         </S.GaugeWrapper>
       </S.ProgressWrapper>
     </S.Container>
