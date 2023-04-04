@@ -3,10 +3,6 @@ import styled from 'styled-components';
 export const GoBack = styled.div`
   color: ${({ theme }) => theme.color.primaryDark};
   transform: translateX(-30%);
-
-  @media (max-width: 800px) {
-    transform: translateX(-90%);
-  }
 `;
 
 export const Container = styled.div`
