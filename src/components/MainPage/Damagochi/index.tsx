@@ -1,9 +1,8 @@
-
 import { useEffect, useReducer, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 
-import * as S from './damagochi.styels';
+import * as S from './Damagochi.styles';
 import {
   caseInitialState,
   caseReducer,
@@ -16,7 +15,6 @@ import { DamagochiAnimation } from '@/assets/damagochi';
 import DamagochiTheme from '@/assets/damagochiCase';
 import Modal from '@/components/common/Modal';
 import { damagochiState } from '@/store/damagochiState';
-
 
 const Damagochi = () => {
   const navigate = useNavigate();
