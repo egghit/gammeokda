@@ -7,7 +7,6 @@ import IndexPage from '@/pages/IndexPage';
 import SettingPage from '@/pages/SettingPage';
 import SigninPage from '@/pages/SigninPage';
 import SignupPage from '@/pages/SignupPage';
-import Test from '@/pages/Test';
 
 const Routes = () => {
   return (
@@ -17,7 +16,6 @@ const Routes = () => {
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/calendar" element={<CalendarPage />} />
       <Route path="/write" element={<DiaryWritePage />} />
-      <Route path="/test" element={<Test />} />
       <Route path="/diaries" element={<DiaryListPage />} />
       <Route path="/setting" element={<SettingPage />} />
     </ReactRoutes>

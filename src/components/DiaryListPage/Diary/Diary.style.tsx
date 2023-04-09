@@ -6,7 +6,6 @@ export const ItemWrapper = styled.article`
 
   @media screen and (max-width: 400px) {
     width: 340px;
-    min-height: 98px;
   }
 `;
 

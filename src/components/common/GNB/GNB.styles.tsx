@@ -4,8 +4,10 @@ export const GNBContainer = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -5rem;
-  max-width: 36.5rem;
+  bottom: 0;
+  max-width: 100%;
+  transform: translateY(90px);
+  overflow-y: hidden;
   margin: 0 auto;
   display: flex;
   align-items: center;

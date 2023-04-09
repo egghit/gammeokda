@@ -9,13 +9,13 @@ export const IntroContainer = styled.div`
   margin-bottom: 2rem;
 `;
 
-export const ServiceTitle = styled.p`
-  color: ${(props) => props.theme.color.primaryDark};
+export const ServiceTitle = styled.div`
+  color: ${({ theme }) => theme.color.primaryDark};
   font-size: 2rem;
   margin-bottom: 0.25rem;
 
   & > p {
-    color: ${(props) => props.theme.color.primary};
+    color: ${({ theme }) => theme.color.primary};
     font-size: 1.5rem;
   }
 `;
@@ -25,20 +25,19 @@ export const MenuWrapper = styled.section`
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  height: 100%;
   margin-bottom: 1rem;
 `;
 
 export const SettingTitle = styled.h2`
   margin-left: 0.5rem;
-  color: ${(props) => props.theme.color.black};
+  color: ${({ theme }) => theme.color.black};
   font-size: 1.5rem;
 `;
 
 export const SettingMenuLink = styled.a`
   width: max-content;
   height: fit-content;
-  color: ${(props) => props.theme.color.titlePink};
+  color: ${({ theme }) => theme.color.titlePink};
   display: block;
   font-size: 1.25rem;
 `;
@@ -46,7 +45,7 @@ export const SettingMenuLink = styled.a`
 export const SettingMenuButton = styled.button`
   width: max-content;
   height: fit-content;
-  color: ${(props) => props.theme.color.titlePink};
+  color: ${({ theme }) => theme.color.titlePink};
   font-size: 1.25rem;
 `;
 
@@ -57,7 +56,7 @@ export const MenuItemWrapper = styled.div`
   width: 100%;
   border-radius: 20px;
   padding: 20px 310px 19px 26px;
-  background-color: ${(props) => props.theme.color.white};
+  background-color: ${({ theme }) => theme.color.white};
 
   button:first-child,
   a:first-child {

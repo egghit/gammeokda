@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
+import DesktopCard from './DesktopCard';
+
 import GNB from '@/components/common/GNB';
-import DesktopPage from '@/pages/DesktopPage';
 
 interface LayoutProps {
   router: ReactNode;
@@ -11,7 +12,7 @@ interface LayoutProps {
 const Layout = ({ router }: LayoutProps) => {
   return (
     <MainContainer>
-      <DesktopPage />
+      <DesktopCard />
       <PageContainer>
         {router}
         <GNB />
@@ -23,11 +24,13 @@ const Layout = ({ router }: LayoutProps) => {
 const MainContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 `;
 
 const PageContainer = styled.div`
   position: relative;
+  height: 100vh;
+  overflow-y: hidden;
 `;
 
 export default Layout;

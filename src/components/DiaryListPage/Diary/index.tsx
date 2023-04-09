@@ -19,8 +19,8 @@ type EmotionMapingType = {
   [key: string]: string;
 };
 
-const Diary = (props: Props) => {
-  const { id, date, photo, text, emotion } = props.contents;
+const Diary = ({ contents }: Props) => {
+  const { id, date, photo, text, emotion } = contents;
 
   const [hasMoreContents, setHasMoreContents] = useState<boolean>(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -53,7 +53,6 @@ const Diary = (props: Props) => {
           <S.DateWrapper>
             {emotion && <img src={EMOTION_ICONS[emotion]} alt="감정" />}
             <S.DiaryDate>
-              {' '}
               {new Intl.DateTimeFormat('ko', {
                 day: 'numeric',
                 weekday: 'long',

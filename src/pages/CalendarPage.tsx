@@ -1,12 +1,11 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 
-import { Container } from './index.style';
-
 import { DiaryContent } from '@/@types/types';
 import CalendarDiaryList from '@/components/CalendarPage/CalendarDiaryList';
 import * as S from '@/components/CalendarPage/CalendarPage.style';
 import CalendarWrapper from '@/components/CalendarPage/CalendarWrapper';
+import Container from '@/components/common/Container';
 import Modal from '@/components/common/Modal';
 import { db } from '@/firebase';
 

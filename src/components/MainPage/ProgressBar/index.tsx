@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
 
-import * as S from './progressBar.styles';
+import * as S from './ProgressBar.styles';
 
 import Progress from '@/assets/progressBar';
 import { damagochiState } from '@/store/damagochiState';
@@ -29,15 +29,19 @@ const ProgressBar = () => {
     accGrowthPercent();
   }, [diaryCounting]);
 
+  const GaugeBar = Progress.Bar[percent];
+
   return (
     <S.Container>
-      <S.ProgressWrapper>{Progress.container}</S.ProgressWrapper>
-      <S.GaugeWrapper>
-        <div>
-          당신의 감정 {growthRest}개가 <br />더 궁금해요!
-        </div>
-        {Progress.bar[`${percent}`]}
-      </S.GaugeWrapper>
+      <S.ProgressWrapper>
+        <Progress.Container />
+        <S.GaugeWrapper>
+          <div>
+            당신의 감정 {growthRest}개가 <br />더 궁금해요!
+          </div>
+          <GaugeBar />;
+        </S.GaugeWrapper>
+      </S.ProgressWrapper>
     </S.Container>
   );
 };
